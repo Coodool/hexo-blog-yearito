@@ -1,0 +1,259 @@
+// Custom styles.
+
+//调整叠加层级
+.fancybox-container {
+  z-index: 9999999999;
+}
+
+#live2dcanvas {
+  z-index: 100 !important;
+}
+
+//统一题图宽高样式
+//.page-home article img {
+//  max-height: 500px;
+//  width: 100%;
+//  object-fit: cover;
+//}
+
+//自定义样式类名
+.text-center {
+  text-align: center;
+}
+
+//自定义回到顶部样式
+.back-to-top {
+  right: 60px;
+  width: 70px;
+  height: 900px;
+  top: -900px;
+  bottom: unset;
+  transition: all .5s ease-in-out;
+  background: url("/images/scroll.png");
+
+  //隐藏箭头图标
+  > i {
+    display: none;
+  }
+
+  &.back-to-top-on {
+    bottom: unset;
+    top: 100vh < (900px + 200px) ? calc( 100vh - 900px - 200px ) : 0px;
+  }
+}
+
+//密码错误sweetalert弹框样式修改
+.swal-overlay {
+  background-color: transparent;
+}
+
+.password-error {
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  border-radius: 4px;
+}
+
+//关闭打赏收款码的文字抖动效果
+#QR > div:hover p {
+  animation: none;
+}
+
+//屏蔽标题下的评论数量
+.post-comments-count {
+  display: none;
+}
+
+//屏蔽评论组件的多余信息
+#comments .info, #comments .vsys {
+	display: none;
+}
+
+//增加搜索弹窗的页边距
+.local-search-popup #local-search-result {
+  padding: 25px 40px
+  height: calc(100% - 95px)
+}
+
+//归档页页边距调整
+.posts-collapse .collection-title {
+  margin: 36px 0px;
+}
+
+.post-block.archive {
+ margin-top: 36px;
+}
+
+//展开/折叠详情标签样式定义
+details {
+  margin: 0px 0px 20px;
+
+  summary:focus {
+    outline: none;
+  }
+}
+
+//取消图片边框
+.posts-expand .post-body img {
+  border: none;
+}
+
+//TOC默认展开两级
+.post-toc .nav .nav-level-1>.nav-child {
+  display: block;
+}
+
+//TOC默认只显示两级目录
+.nav-level-2 > .nav-child {
+  display: none !important;
+}
+
+//TOC目录默认全部展开
+//.post-toc .nav .nav-child { display: block; }
+
+//加宽菜单间距，放大菜单图标
+#menu .menu-item {
+  margin: 0px 14px;
+
+  .fa {
+    font-size: 16px;
+  }
+}
+
+//隐藏社交图标前的圆点
+.links-of-author a,
+.links-of-author .exturl {
+  &:before {
+    display: none;
+  }
+}
+
+//隐藏文章描述
+.post-description {
+  display: none;
+}
+
+//移除图片边框
+//.posts-expand .post-body img {
+//	border: none;
+//}
+
+//无序列表引导符号改为实心黑点
+.posts-expand .post-body ul {
+  padding-left: 32px;
+  li {
+    list-style: unset;
+  }
+}
+
+//参考链接样式
+.posts-expand .post-body .reference-linking {
+  margin: 60px 0px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 24px;
+}
+
+//音乐播放器居中
+div.aplayer {
+  margin: 5px auto;
+  max-width: 500px;
+}
+
+//修改不蒜子数据颜色
+.busuanzi-value {
+  color: #1890ff;
+}
+
+//侧边栏触发器位置
+.sidebar-toggle {
+  left: 30px;
+  //top: 25px;
+}
+
+//侧边栏放到左边
+.sidebar {
+  left: 0px;
+}
+
+//平板和手机上不显示看板娘
+#live2dcanvas {
+  +mobile() {
+    display: none;
+  }
+  +tablet() {
+    display: none;
+  }
+}
+
+//窗口波动效果相关样式
+if hexo-config('wobble')  {
+  .sidebar {
+    box-shadow: none;
+  }
+
+  .wobbleTransparentBK{
+    background-color: rgba(0,0,0,0) !important;
+  }
+
+  .wobbleTransparentLine{
+    border-color: rgba(0,0,0,0) !important;
+  }
+
+  //Next.Muse中为Header和Footer添加背景色
+  #header, #footer {
+    background-color: rgb(245, 245, 245);
+  }
+
+  //防止sidebar和footer同时开启动效时堆叠异常
+  #sidebar, header {
+    z-index: 1 !important;
+  }
+
+  //防止手机版归档页面中导航展开后被正文遮住
+  //.posts-collapse {
+  //  z-index: 0;
+  //}
+
+  //防止挡住页末文章的阅读全文按钮
+  .main {
+    padding-bottom: 200px;
+  }
+}
+
+//增加头部高度配合页面加载时的收缩特效
+.header-inner {
+  padding: 80px 0 80px;
+}
+
+// Mist主题下自定义样式
+if hexo-config('scheme') == "Mist" {
+  .site-meta {
+    float: none;
+  }
+
+  .footer-inner {
+    text-align: center;
+  }
+
+  /*.menu {
+    text-align: right;
+  }*/
+}
+
+// Muse主题下自定义样式
+if hexo-config('scheme') == "Muse" {
+  //为头部和尾部添加背景色
+  #header, #footer {
+    background-color: rgb(245, 245, 245);
+  }
+
+  .site-meta {
+    .brand {
+      color: rgb(34, 34, 34);
+      background: none;
+    }
+
+    .site-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
