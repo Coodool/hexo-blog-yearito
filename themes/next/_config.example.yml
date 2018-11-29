@@ -506,15 +506,15 @@ changyan:
 # more info please open https://valine.js.org
 valine:
   enable: true # When enable is set to be true, leancloud_visitors is recommended to be closed for the re-initialization problem within different leancloud adk version.
-  appid: ****** # your leancloud application appid
-  appkey: ****** # your leancloud application appkey
+  appid: # your leancloud application appid
+  appkey: # your leancloud application appkey
   notify: false # mail notifier , https://github.com/xCss/Valine/wiki
   verify: false # Verification code
   placeholder: " " # comment box placeholder
   avatar: mm # gravatar style
   guest_info: nick,mail # custom comment header
   pageSize: 10 # pagination size
-  visitor: false # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
+  visitor: true # leancloud-counter-security is not supported for now. When visitor is set to be true, appid and appkey are recommended to be the same as leancloud_visitors' for counter compatibility. Article reading statistic https://valine.js.org/visitor.html
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -576,14 +576,14 @@ needmoreshare2:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-google_site_verification: ******
+google_site_verification:
 
 # Google Analytics
-google_analytics: ******
+google_analytics:
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-bing_site_verification: ******
+bing_site_verification:
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -591,7 +591,7 @@ bing_site_verification: ******
 
 #  Webmaster tools verification setting
 # See: https://ziyuan.baidu.com/site/
-baidu_site_verification: ******
+baidu_site_verification:
 
 # CNZZ count
 #cnzz_siteid:
@@ -640,9 +640,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
-  app_id: ****** #<app_id>
-  app_key: ****** #<app_key>
+  enable: false
+  app_id: #<app_id>
+  app_key: #<app_key>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in lc counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set the `security` to `false`.

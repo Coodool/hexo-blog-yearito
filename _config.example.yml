@@ -89,8 +89,8 @@ symbols_count_time:
   total_time: false
 
 # algolia:
-#   applicationID: AH5MS74BU2
-#   apiKey: 80dd496f22513c70e0e7d53e54301748
+#   applicationID:
+#   apiKey:
 #   indexName: yearito blog
 #   chunkSize: 5000
 
@@ -172,5 +172,5 @@ lazyload:
 baidu_url_submit:
   count: 100  # 提交最新的一个链接
   host: yearito.cn  # 在百度站长平台中注册的域名
-  token: ******  # 请注意这是您的秘钥，所以请不要把博客源代码发布在公众仓库里!
+  token:  # 请注意这是您的秘钥，所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt  # 文本文档的地址，新链接会保存在此文本文档里
