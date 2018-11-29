@@ -82,7 +82,6 @@
 
 {# hotjar 页面反馈 #}
 {% if theme.hotjar %}
-  <!-- Hotjar Tracking Code for yearito.cn -->
   <script>
     (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -96,7 +95,7 @@
 {% endif %}
 
 {# Tidio 在线联系功能 #}
-{% if theme.tidio.enable %}  
+{% if theme.tidio.enable %}
   <script async src="//code.tidio.co/{{ theme.tidio.key }}.js"></script>
 {% endif %}
 
