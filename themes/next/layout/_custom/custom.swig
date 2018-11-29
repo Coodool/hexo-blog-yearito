@@ -81,7 +81,7 @@
 {% endif %}
 
 {# hotjar 页面反馈 #}
-{% if theme.hotjar %}
+{% if theme.hotjar.enable %}
   <script>
     (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
