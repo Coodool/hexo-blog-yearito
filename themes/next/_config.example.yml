@@ -633,7 +633,7 @@ vkontakte_api:
 # To get your ID visit https://widgetpack.com
 rating:
   enable: true
-  id:     
+  id:
   color:  fadb14
 # ---------------------------------------------------------------
 
@@ -1011,13 +1011,13 @@ images: images
 # see: https://www.tidiochat.com
 tidio:
   enable: true
-  key:
+  key:   # Public_Key
 
 # hotjar
 # see: https://www.hotjar.com/
 hotjar:
   enable: true
-  siteID:
+  siteID:   # site ID
 
 # window woblle
 wobble:

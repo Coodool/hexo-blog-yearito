@@ -132,6 +132,8 @@ live2d:
   log: false # Whether to show logs in console
   model:
     use: live2d-widget-model-shizuku  # 萌系少女
+    # use: live2d-widget-model-koharu  # 情侣 女
+    # use: live2d-widget-model-haruto  # 情侣 男
     # use: live2d-widget-model-tororo   # 小白猫
     # use: live2d-widget-model-hijiki  # 小黑猫
 
