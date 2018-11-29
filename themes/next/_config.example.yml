@@ -1009,11 +1009,15 @@ images: images
 
 # Tidio online chat
 # see: https://www.tidiochat.com
-tidio: true
+tidio:
+  enable: true
+  key:
 
 # hotjar
 # see: https://www.hotjar.com/
-hotjar: true
+hotjar:
+  enable: true
+  siteID: 
 
 # window woblle
 wobble:

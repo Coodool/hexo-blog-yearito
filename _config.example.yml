@@ -149,17 +149,17 @@ live2d:
     opacityDefault: 0.7 # 默认透明度
 
 douban:
-  user: yearito
+  user:
   builtin: false
   book:
     title: '我的书单'
-    quote: '看书很慢，但还得看'
+    quote:
   movie:
     title: '我的电影'
     quote:
   game:
     title: '我的游戏'
-    quote: "目前主修大型养成类游戏：女朋友"
+    quote:
   timeout: 10000
 
 # 图片懒加载
@@ -171,6 +171,6 @@ lazyload:
 # 百度主动推送
 baidu_url_submit:
   count: 100  # 提交最新的一个链接
-  host: yearito.cn  # 在百度站长平台中注册的域名
+  host:   # 在百度站长平台中注册的域名
   token:  # 请注意这是您的秘钥，所以请不要把博客源代码发布在公众仓库里!
   path: baidu_urls.txt  # 文本文档的地址，新链接会保存在此文本文档里

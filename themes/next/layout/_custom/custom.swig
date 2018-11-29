@@ -31,7 +31,7 @@
 
     //插入到卜蒜子之后
     document.querySelector(".footer-inner").appendChild(div);
-    
+
     timer();
     setInterval("timer()",1000)
   </script>
@@ -86,7 +86,7 @@
   <script>
     (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:1071282,hjsv:6};
+      h._hjSettings={hjid:{{ theme.hotjar.siteID }},hjsv:6};
       a=o.getElementsByTagName('head')[0];
       r=o.createElement('script');r.async=1;
       r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
@@ -96,8 +96,8 @@
 {% endif %}
 
 {# Tidio 在线联系功能 #}
-{% if theme.tidio %}
-  <script async src="//code.tidio.co/sfgxfyfovgakxawhgatfwnxcamp0uh9x.js"></script>
+{% if theme.tidio.enable %}  
+  <script async src="//code.tidio.co/{{ theme.tidio.key }}.js"></script>
 {% endif %}
 
 {# 鼠标点击特效 #}
