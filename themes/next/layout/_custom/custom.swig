@@ -24,9 +24,14 @@
       div.innerHTML = `{{ __('footer.age')}} ${ages}`;
     }
     var div = document.createElement("div");
+
     //插入到copyright之后
-    var copyright = document.querySelector(".copyright");
-    document.querySelector(".footer-inner").insertBefore(div, copyright.nextSibling);
+    //var copyright = document.querySelector(".copyright");
+    //document.querySelector(".footer-inner").insertBefore(div, copyright.nextSibling);
+
+    //插入到卜蒜子之后
+    document.querySelector(".footer-inner").appendChild(div);
+    
     timer();
     setInterval("timer()",1000)
   </script>
