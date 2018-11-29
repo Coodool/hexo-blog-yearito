@@ -10,6 +10,11 @@
   </span>
   <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright | default(author) }}</span>
 
+  {% if theme.footer.approve %}
+    <span class="post-meta-divider">|</span>
+    <span>{{ theme.footer.approve }}</span>
+  {% endif %}
+
   {% if config.symbols_count_time.total_symbols %}
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">

@@ -85,7 +85,7 @@ deploy:
 symbols_count_time:
   symbols: true
   time: false
-  total_symbols: true
+  total_symbols: false
   total_time: false
 
 # algolia:
