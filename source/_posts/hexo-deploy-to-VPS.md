@@ -106,7 +106,7 @@ $ ssh-copy-id git@yearito.cn
 $ ssh git@yearito.cn
 ```
 
-在VPS git用户目录下执行如下命令创建远程仓库：
+在git用户目录下执行如下命令创建远程仓库：
 
 ```
 $ mkdir blog.yearito.git
@@ -149,10 +149,9 @@ warning: LF will be replaced by CRLF in tags/Hexo/index.html.
 
 此时VPS上的远程仓库只是一个裸仓库，无法用于搭建站点服务器。所以我们需要在推送更新的同时触发Git Hooks钩子，来从远程仓库中克隆出完整的博客资源放到Web服务器根目录下。
 
-首先切换到git用户，创建Web根目录：
+首先创建Web根目录：
 
 ```
-$ su git
 $ sudo mkdir /var/www/blog.yearito -p
 ```
 

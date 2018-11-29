@@ -407,7 +407,7 @@ live2d:
 例如通过以下命令下载模型 shizuku：
 
 ```
-$ npm install --save live2d-widget-model-shizuku
+$ npm install live2d-widget-model-shizuku
 ```
 
 因为修改了站点配置文件，所以需要重启服务器才能预览模型效果。

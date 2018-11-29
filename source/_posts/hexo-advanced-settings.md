@@ -600,18 +600,26 @@ $ hexo douban
 
 ![Tidio 界面](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio.png "Tidio 界面")
 
-[注册Tidio账号](https://www.tidiochat.com/panel/login)，根据引导填写信息，在最后一步 Install the code on your website 中，可以找到Tidio的加载代码：
+首先需要[注册Tidio账号](https://www.tidiochat.com/panel/login)，根据引导填写应用信息。进入控制台后，在 **SETTINGS** -> **Developer** -> **Project data** 中获取到Public Key：
 
-![Install the code on your website](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio-install.png "Install the code on your website")
+![Tidio Public Key](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/tidio-public-key.png "Tidio Public Key")
 
-如果错过了上述步骤，可以在控制台的 **Channel** -> **Live chat** -> **Integration** 中找到加载代码。
+在主题配置文件下添加以下代码并补全Public Key：
 
-将加载代码复制到主题自定义布局文件中：
+``` yaml themes\next\_config.yml
+# Tidio online chat
+# see: https://www.tidiochat.com
+tidio:
+  enable: true
+  key:  # Public_Key
+```
+
+在主题自定义布局文件中添加以下代码：
 
 ``` html themes\next\layout\_custom\custom.swig
 {# Tidio 在线联系功能 #}
-{% if theme.tidio %}
-  <script async src="//code.tidio.co/sfgxfyf8vgakxawhgvtfenxcamp0uh9x.js"></script>
+{% if theme.tidio.enable %}
+  <script async src="//code.tidio.co/{{ theme.tidio.key }}.js"></script>
 {% endif %}
 ```
 
@@ -628,14 +636,6 @@ $ hexo douban
 +     {% include '_custom/custom.swig' %}
     </body>
   </html>
-```
-
-在主题配置文件下添加以下代码：
-
-``` yaml themes\next\_config.yml
-# Tidio online chat
-# see: https://www.tidiochat.com
-tidio: true
 ```
 
 刷新页面即可在右下角看到Tidio的会话标志了。接下来可以在Tidio控制台的 **Channel** -> **Live chat** ->  **Appearance** 中根据提示定制聊天对话框的主题外观和语言包：
@@ -680,20 +680,29 @@ Hotjar通过以上八项具体而实用的功能为用户提供主客观相结�
 更多关于 Incoming Feedback 的介绍请参考 [Incoming Feedback by Hotjar](https://www.hotjar.com/incoming-feedback)
 {% endnote %}
 
-在站点中集成Hotjar的各项功能，需要先[注册 Hotjar 账号](https://insights.hotjar.com/register)，根据新手指引一步步新建站点，然后将下图所示的代码复制到自定义布局目录下新建的 hotjar.swig 文件中：
+在站点中集成Hotjar的各项功能，需要先 [注册 Hotjar 账号](https://insights.hotjar.com/register)，根据指引一步步填写站点信息，然后在控制面板首页中获取site ID：
 
-![插入 Tracking Code](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-tracking-code.png "插入 Tracking Code")
+![Hotjar site ID](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-site-id.png "Hotjar site ID")
+
+在主题配置文件下添加以下代码并补全site ID：
+
+``` yaml themes\next\_config.yml
+# Hotjar
+# see: https://www.hotjar.com/
+hotjar:
+  enable: true
+  siteID:  # site ID
+```
 
 在主题自定义布局文件中添加以下代码：
 
 ``` html themes\next\layout\_custom\custom.swig
 {# hotjar 页面反馈 #}
-{% if theme.hotjar %}
-  <!-- Hotjar Tracking Code for yearito.cn -->
+{% if theme.hotjar.enable %}
   <script>
     (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:*******,hjsv:*};
+      h._hjSettings={hjid:{{ theme.hotjar.siteID }},hjsv:6};
       a=o.getElementsByTagName('head')[0];
       r=o.createElement('script');r.async=1;
       r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
@@ -714,14 +723,6 @@ Hotjar通过以上八项具体而实用的功能为用户提供主客观相结�
 +     {% include '_custom/custom.swig' %}
     </body>
   </html>
-```
-
-在主题配置文件下添加以下代码：
-
-``` yaml themes\next\_config.yml
-# Hotjar
-# see: https://www.hotjar.com/
-hotjar: true
 ```
 
 如此即可将 Hotjar 嵌入到站内，接下来在 Hotjar 控制台菜单中点击 Incoming，然后根据引导一步步配置即时反馈服务即可：
@@ -1072,7 +1073,11 @@ rating:
 
 此时刷新浏览器即可在文章末尾看到空的评分栏了。点击评分发现需要以社交账号登陆，而这些社交账号基本都是facebook、twitter等墙外的社交软件，限制了评分系统可用性，我们可以在 widgetpack 控制台中修改评分认证机制。
 
-在控制台中点击左上角展开菜单，在 **Rating** -> **Setting** 中将 Vote via 选项改为 IP address 或 Device(cookie) 以开启匿名评分，这两个选项分别对应于基于IP地址认证和基于设备进行认证。用户还可以在该页面设定 star 数量和大小。修改后记得勾选右下角的SAVE SETTING才会生效。
+在控制台中点击左上角展开菜单，在 **Rating** -> **Setting** 中将 Vote via 选项改为 Device(cookie) 以开启匿名评分，该选项将基于设备认证访问者身份：
+
+![开启匿名评分](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rate-vote-via.png "开启匿名评分")
+
+用户还可以在该页面设定 star 数量和大小。修改后记得勾选右下角的SAVE SETTING才会生效。
 
 在实际使用过程中，并非每篇文章都需要开启评分。此时可在 Front-Matter 中设定变量 rating 用于控制是否开启评分。修改文章布局模板中相关代码，使得只有当主题配置文件中 `rating.enable` 字段和 `page.rating` 字段同时为 `true` 才会插入评分组件：
 
