@@ -656,7 +656,7 @@ comments: false
 此时打包的时候Hexo仍会渲染该文件，添加上复杂的主题框架与功能，用户可以修改站点配置文件以跳过渲染该文件：
 
 ``` yaml _config.yml
-skip_render: /404.html
+skip_render: 404.html
 ```
 
 这样以来Hexo在打包的时候就只是将该文件复制到 public 目录下，而不做任何处理了。
