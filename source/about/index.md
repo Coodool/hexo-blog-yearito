@@ -30,4 +30,4 @@ date: 2018-09-29 18:02:17
 # 友情链接
 
 - [momo](http://momo.cool/): 大学好基友
-- [yearita](http://yearita.cn/): 老婆大人（还未上线）
+- [yearita](http://yearita.cn/): 老婆大人
