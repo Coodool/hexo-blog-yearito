@@ -107,9 +107,9 @@ Next中使用 [FontAwesome](https://fontawesome.com/v4.7.0/icons/) 作为图标�
 <div>
   {% if not is_index %}
     <div style="text-align:center;color:#bfbfbf;font-size:16px;">
-      <span>------------本文结束 </span>
+      <span>-------- 本文结束 </span>
       <i class="fa fa-{{ config.post_end_tag.icon }}"></i>
-      <span> 感谢阅读------------</span>
+      <span> 感谢阅读 --------</span>
     </div>
   {% endif %}
 </div>
