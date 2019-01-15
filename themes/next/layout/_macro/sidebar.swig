@@ -13,7 +13,7 @@
     {% endif %}
     <div class="sidebar-inner">
 
-      {% set display_toc = is_post and theme.toc.enable %}
+      {% set display_toc = is_post and theme.toc.enable and not page.hide_toc %}
 
       {% if display_toc and toc(page.content).length > 1 %}
         <ul class="sidebar-nav motion-element">
