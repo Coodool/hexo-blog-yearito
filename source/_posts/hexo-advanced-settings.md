@@ -768,7 +768,7 @@ valine:
 Valine也附带了阅读统计功能，可以在Valine配置项中设置 `visitor: true` 开启该功能。为避免后端服务冲突，建议不要同时启用Valine的阅读统计功能和 `leancloud_visitors`。
 
 {% note info %}
-关于如何在收到评论时发送邮件提醒请参照 [Valine 评论系统中的邮件提醒设置](https://github.com/xCss/Valine/wiki/Valine-%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E9%82%AE%E4%BB%B6%E6%8F%90%E9%86%92%E8%AE%BE%E7%BD%AE)
+关于如何在收到评论时发送邮件提醒请参照 [赵俊 | Hexo 优化 --- Valine 扩展之邮件通知](http://www.zhaojun.im/hexo-valine-admin/)
 {% endnote %}
 
 Next暂时不支持通过配置的方式隐藏文章标题下的评论数量，如要隐藏，可在自定义样式文件中添加如下代码：
@@ -788,10 +788,6 @@ Next暂时不支持通过配置的方式隐藏文章标题下的评论数量，�
   display: none;
 }
 ```
-
-{% note danger %}
-请不要在我的文章评论区做测试或者发没有意义的内容！
-{% endnote%}
 
 ## 文末版权声明
 

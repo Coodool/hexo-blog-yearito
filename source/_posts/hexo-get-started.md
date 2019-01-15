@@ -316,6 +316,17 @@ toc:
 }
 ```
 
+### 主动隐藏文章目录
+
+如果你写了一篇并不算长的文章，没有层层嵌套的多级目录结构，此时侧边的文章目录空荡荡的就有点鸡肋了。修改侧边栏布局模板中的相关逻辑代码：
+
+``` diff themes\next\layout\_macro\sidebar.swig
+- {% set display_toc = is_post and theme.toc.enable %}
++ {% set display_toc = is_post and theme.toc.enable and not page.hide_toc %}
+```
+
+然后就可在 Front-Matter 中设定变量 hide_toc 用于控制是否隐藏侧边目录。
+
 ## 修改文章meta信息
 
 默认主题配置中，标题下方会显示文章的创建时间、文章的修改时间、文章分类信息等元数据，用户可以在主题配置文件中自定义设置需要显示的meta元信息：
