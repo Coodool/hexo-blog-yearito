@@ -3,6 +3,7 @@ title: 实用截图工具推荐
 date: 2019-1-14 21:24:03
 tags:
 categories:
+  - 工作
   - 效率
 copyright: true
 reward: true  

@@ -2,6 +2,7 @@
 title: 西式婚礼仪式流程
 tags: 海外婚礼
 categories:
+  - 生活
   - 情感
 copyright: false
 reward: false
