@@ -11,6 +11,9 @@ related_posts: true
 date: 2019-01-16 15:12:15
 ---
 
+![题图](http://yearito-1256884783.image.myqcloud.com/thumbnails/room-setting.jpg!thumbnail "Photo by Lorenzo Pennati
+")
+
 Git GUI 客户端和众多IDE都已经通过图形化的操作方式集成了Git的常用功能，但作为程序员，还是应该通过命令行解决问题，知其然，知其所以然。
 
 本文基于简单应用场景储备Git命令，持续更新...

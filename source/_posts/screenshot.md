@@ -11,6 +11,8 @@ rating: true
 hide_toc: true
 ---
 
+![题图](http://yearito-1256884783.image.myqcloud.com/thumbnails/shadow.jpg!thumbnail)
+
 一开始，我们都习惯于将QQ作为默认截图工具，直到有一天我按了 Ctrl + Alt + A 却没有响应，展开任务栏发现居然没有挂QQ，突然意识到陪伴了我们十几年的QQ已经开始淡出我们的社交圈。同时，我对截图功能有了更复杂的需求，例如为博客中的截图添加四周阴影，所以开始寻找一些独立的截图工具。
 
 本文对比几款比较实用的截图工具，并谈及具体的应用场景。

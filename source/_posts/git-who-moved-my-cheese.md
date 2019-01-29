@@ -12,6 +12,7 @@ hide_toc: true
 date: 2019-01-18 15:00:50
 ---
 
+![题图](http://yearito-1256884783.image.myqcloud.com/thumbnails/boat-in-sky.jpg!thumbnail)
 
 工作中遇到了这样一个场景：突然发现自己写的一段代码被人改过，想看看到底是谁改的，改了啥。
 
