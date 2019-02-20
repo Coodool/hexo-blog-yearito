@@ -12,6 +12,13 @@ categories:
 
 一定要足够小众，最好是一个页面就能完事儿那种，也一定要有意思，看完想回来点赞那种。
 
+- [Swimming.jp](http://www.swimming.jp)
+- [In Pieces](http://species-in-pieces.com)
+- [Nippon Colors](http://nipponcolors.com/)
+- [Chinese Colors](http://zhongguose.com/)
+
+持续收录中...
+
 <!-- more -->
 
 # [Swimming.jp](http://www.swimming.jp)

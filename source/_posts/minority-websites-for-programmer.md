@@ -12,6 +12,15 @@ categories:
 
 面向程序员的一些精美的小众网站：学习资源或是一些趁手的工具。
 
+- [mydevice.io](https://www.mydevice.io/)
+- [RegExr](https://regexr.com/)
+- [Flexbox Froggy](https://flexboxfroggy.com/)
+- [Grid Garden](https://cssgridgarden.com/)
+- [Flexbox Playground](https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/)
+- [VisuAlgo](https://visualgo.net/en)
+
+持续收录中...
+
 <!-- more -->
 
 # [mydevice.io](https://www.mydevice.io/)
