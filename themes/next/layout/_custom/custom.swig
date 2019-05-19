@@ -39,7 +39,7 @@
 
 {# wobble窗口摆动特效 #}
 {% if theme.wobble.enable %}
-  <script src="https://script-1256884783.file.myqcloud.com/wobblewindow.js"></script>
+  <script src="/js/wobblewindow.js"></script>
   <script>
     //只在桌面版网页启用特效
     if( window.innerWidth > 768  ){
