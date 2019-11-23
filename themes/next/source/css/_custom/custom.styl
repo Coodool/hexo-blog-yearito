@@ -58,7 +58,10 @@ section.posts-expand .post-body .fancybox {
 
   &.back-to-top-on {
     bottom: unset;
-    top: 100vh < (900px + 200px) ? calc( 100vh - 900px - 200px ) : 0px;
+    top: calc( 100vh - 900px - 200px );
+    @media (min-height: 1100px) {
+      top: 0px;
+    }
   }
 }
 
