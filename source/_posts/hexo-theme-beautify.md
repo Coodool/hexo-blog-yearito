@@ -152,7 +152,7 @@ post_end_tag:
 在根目录下执行以下命令安装相关依赖：
 
 ```
-$ git clone https://github.com/theme-next/theme-next-pace themes/next/source/lib/fancybox
+$ git clone https://github.com/theme-next/theme-next-pace themes/next/source/lib/pace
 ```
 
 在主题配置文件中设置 `pace: true`。
@@ -463,10 +463,10 @@ $ npm install live2d-widget-model-shizuku
 
 在主题自定义布局文件中添加以下代码：
 
-``` html themes\next\layout\_script\custom.swig
+``` html themes\next\layout\_custom\custom.swig
 {# wobble窗口摆动特效 #}
 {% if theme.wobble %}
-  <script src="/js/wobblewindow"></script>
+  <script src="/js/wobblewindow.js"></script>
   <script>
     //只在桌面版网页启用特效
     if( window.innerWidth > 768  ){
@@ -654,15 +654,15 @@ wobble:
 ``` html themes\next\layout\_custom\custom.swig
 {# 鼠标点击特效 #}
 {% if theme.cursor_effect == "fireworks" %}
-  <script async src="js/cursor/fireworks.js"></script>
+  <script async src="/js/cursor/fireworks.js"></script>
 {% elseif theme.cursor_effect == "explosion" %}
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
   <script src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
-  <script async src="js/cursor/explosion.min.js"></script>
+  <script async src="/js/cursor/explosion.min.js"></script>
 {% elseif theme.cursor_effect == "love" %}
-  <script async src="js/cursor/love.min.js"></script>
+  <script async src="/js/cursor/love.min.js"></script>
 {% elseif theme.cursor_effect == "text" %}
-  <script async src="js/cursor/text.js"></script>
+  <script async src="/js/cursor/text.js"></script>
 {% endif %}
 ```
 

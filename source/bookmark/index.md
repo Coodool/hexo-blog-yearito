@@ -1,5 +1,5 @@
 ---
-title: 收录精品链接
+title: 书签
 comments: true
 date: 2018-11-26 18:57:51
 ---
@@ -24,3 +24,9 @@ date: 2018-11-26 18:57:51
 # 工具
 
 - [Send Anywhere](https://send-anywhere.com/): 远程发送文件
+
+---
+
+更多有意思的网站请见：
+- {% post_link minority-websites 一些小众但很有意思的网站 %}
+- {% post_link minority-websites-for-programmer 一些小众但很有意思的网站：程序员版 %}

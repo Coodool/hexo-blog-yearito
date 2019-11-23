@@ -5,13 +5,13 @@ reward: true
 rating: true
 related_posts: false
 date: 2019-02-16 19:24:39
-tags:
+tags: 有意思
 categories:
 ---
 
-
 面向程序员的一些精美的小众网站：学习资源或是一些趁手的工具。
 
+- [free-for.dev](https://free-for.dev/)
 - [mydevice.io](https://www.mydevice.io/)
 - [RegExr](https://regexr.com/)
 - [Flexbox Froggy](https://flexboxfroggy.com/)
@@ -23,11 +23,19 @@ categories:
 
 <!-- more -->
 
+# [free-for.dev](https://free-for.dev/)
+
+收集各种可以免费使用的（或有免费层的）互联网服务。
+
+![free-for.dev](http://qiniu.yearito.cn/minority-websites-for-programmer/free-for-dev.jpg)
+
 # [mydevice.io](https://www.mydevice.io/)
 
 获取设备分辨率和像素信息、浏览器兼容性
 
 ![mydevice](http://yearito-1256884783.image.myqcloud.com/minority-websites-for-programmer/my-device.jpg)
+
+---
 
 # [RegExr](https://regexr.com/)
 
@@ -35,23 +43,31 @@ categories:
 
 ![RegExr](http://yearito-1256884783.image.myqcloud.com/minority-websites-for-programmer/regexr.png)
 
+---
+
 # [Flexbox Froggy](https://flexboxfroggy.com/)
 
-通过游戏的方式学习CSS Flex布局
+通过游戏的方式学习 CSS Flex 布局
 
 ![Flexbox Froggy](http://yearito-1256884783.image.myqcloud.com/minority-websites-for-programmer/flexbox-froggy.jpg)
 
+---
+
 # [Grid Garden](https://cssgridgarden.com/)
 
-通过游戏的方式学习CSS Grid布局
+通过游戏的方式学习 CSS Grid 布局
 
 ![Grid Garden](http://yearito-1256884783.image.myqcloud.com/minority-websites-for-programmer/grid-garden.jpg)
+
+---
 
 # [Flexbox Playground](https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/)
 
 CSS Flex 布局练习，原文见：[A Visual Guide to CSS3 Flexbox Properties](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties#toc-flexbox-container-properties)
 
 ![Flexbox Playground](http://yearito-1256884783.image.myqcloud.com/minority-websites-for-programmer/flexbox-playground.jpg)
+
+---
 
 # [VisuAlgo](https://visualgo.net/en)
 
