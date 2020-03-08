@@ -15,11 +15,12 @@ date: 2018-11-26 18:57:51
 - [Medium](https://medium.com/)：博客发布平台
 - [Quara](https://www.quora.com/)：在线问答网站，国际版知乎
 - [InfoQ](https://www.infoq.com/)：促进软件开发领域知识与创新的传播
-- [CSS-Tricks](https://css-tricks.com): 优质的开发者文章，不仅仅是CSS
+- [CSS-Tricks](https://css-tricks.com): 优质的开发者文章，不仅仅是 CSS
 
 # 编程
 
-- [Linux 命令手册](http://man.linuxde.net/): Linux命令查询与学习资料
+- [Linux 命令手册](http://man.linuxde.net/): Linux 命令查询与学习资料
+- [Postwowman](https://postwoman.io/): API 请求构建器，Postman 的替代品
 
 # 工具
 
@@ -28,5 +29,6 @@ date: 2018-11-26 18:57:51
 ---
 
 更多有意思的网站请见：
+
 - {% post_link minority-websites 一些小众但很有意思的网站 %}
 - {% post_link minority-websites-for-programmer 一些小众但很有意思的网站：程序员版 %}

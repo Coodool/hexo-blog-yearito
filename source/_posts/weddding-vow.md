@@ -17,9 +17,7 @@ Good Afternoon. We are here on this special day to share with everyone the most 
 
 <!-- more -->
 
-
 下午好，我们相聚于这特别的一天，共同分享他们生命中最重要的时刻。他们学会了解彼此，深爱彼此，并决定以夫妻的身份共度生命。
-
 
 In Bali, the people say that the union of water and rice provides them with all they need for wealth, health and lift and, it is our hope that the union between Gao Zhenman and Ye Quan will be like the union of water and rice and bear in their lives much happiness.
 

@@ -7,15 +7,15 @@ rating: true
 related_posts: true
 tags: Hexo
 categories:
-- 技术
-- 博客
+  - 技术
+  - 博客
 ---
 
 ![题图](http://yearito-1256884783.image.myqcloud.com/thumbnails/snow-mountain.jpg!thumbnail "Photo by Przemyslaw Kruk")
 
-本篇文章介绍了如何为Hexo博客集成更多强大的功能。
+本篇文章介绍了如何为 Hexo 博客集成更多强大的功能。
 
-第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点PV和PU统计、站点运行时间统计、文章PV统计、站点和文章字数统计等。
+第一章介绍了在站点中集成基于三方插件的数据统计服务，包括站点 PV 和 PU 统计、站点运行时间统计、文章 PV 统计、站点和文章字数统计等。
 
 第二张介绍了针对于站点的个性化设置方案，包括添加搞怪的网页标题，添加站内搜索功能，添加热门文章排行榜页面，添加豆瓣阅读/电影/游戏等资料页面，添加在线聊天和即时反馈等功能。
 
@@ -31,26 +31,29 @@ categories:
 
 ![站点访问统计](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/busuanzi-site-footer.png "站点访问统计")
 
-左侧数据表示独立访客数UV，右侧数据表示网站浏览量PV，访客数和浏览量的区别在于一个用户连续点击n篇文章，会记录n次浏览量，但只记录一次访客数。
+左侧数据表示独立访客数 UV，右侧数据表示网站浏览量 PV，访客数和浏览量的区别在于一个用户连续点击 n 篇文章，会记录 n 次浏览量，但只记录一次访客数。
 
 {% note %}
-由于不蒜子是基于域名来进行统计计算的，所以通过 localhost:4000 端口访问的时候统计数据PV和UV都会异常的大，属于正常现象。
+由于不蒜子是基于域名来进行统计计算的，所以通过 localhost:4000 端口访问的时候统计数据 PV 和 UV 都会异常的大，属于正常现象。
 {% endnote %}
 
 在页脚布局模板文件首行添加如下代码：
 
-``` html themes\next\layout\_partial\footer.swig
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+```html themes\next\layout_partial\footer.swig
+<script
+  async
+  src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"
+></script>
 ```
 
 在主题配置文件中做出如下修改：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 busuanzi_count:
   enable: true
-  total_visitors: true   # 访客数
+  total_visitors: true # 访客数
   total_visitors_icon: user
-  total_views: true   # 访问量
+  total_views: true # 访问量
   total_views_icon: eye
   post_views: false
   post_views_icon: eye
@@ -60,7 +63,7 @@ busuanzi_count:
 
 高阶用法：通过修改代码来自定义统计文案，如果你想使用本站统计文案，需要对不蒜子的代码做出如下修改：
 
-``` diff themes\next\layout\_third-party\analytics\busuanzi-counter.swig
+```diff themes\next\layout_third-party\analytics\busuanzi-counter.swig
   {% if theme.busuanzi_count.total_visitors %}
 -   <span class="site-uv" title="{{ __('footer.total_visitors') }}">
 +   <span class="site-uv">
@@ -82,7 +85,7 @@ busuanzi_count:
 
 在自定义样式文件中添加如下样式：
 
-``` css themes/next/source/css/_custom/custom.styl
+```css themes/next/source/css/_custom/custom.styl
 //修改不蒜子数据颜色
 .busuanzi-value {
   color: #1890ff;
@@ -91,7 +94,7 @@ busuanzi_count:
 
 然后修改统计表述文案：
 
-``` yaml themes\next\languages\zh-CN.yml
+```yaml themes\next\languages\zh-CN.yml
 footer:
   total_views: "历经 %s 次回眸才与你相遇"
   total_visitors: "我的第 %s 位朋友，"
@@ -100,7 +103,7 @@ footer:
 ## 站点运行时间统计
 
 {% note info %}
-本章节受 [reuixiy | 打造个性超赞博客Hexo+NexT+GitHubPages的超深度优化 #5.7](https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html) 启发，自行重构了代码逻辑。
+本章节受 [reuixiy | 打造个性超赞博客 Hexo+NexT+GitHubPages 的超深度优化 #5.7](https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html) 启发，自行重构了代码逻辑。
 {% endnote %}
 
 在站点底部显示站点已运行时间，效果如下：
@@ -109,36 +112,35 @@ footer:
 
 在主题自定义布局文件中添加以下代码：
 
-``` html thems\next\layout\_custom\custom.swig
-{# 页脚站点运行时间统计 #}
-{% if theme.footer.ages.enable %}
-  <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/moment-precise-range-plugin@1.3.0/moment-precise-range.min.js"></script>
-  <script>
-    function timer() {
-      var ages = moment.preciseDiff(moment(),moment({{ theme.footer.ages.birthday }},"YYYYMMDD"));
-      ages = ages.replace(/years?/, "年");
-      ages = ages.replace(/months?/, "月");
-      ages = ages.replace(/days?/, "天");
-      ages = ages.replace(/hours?/, "小时");
-      ages = ages.replace(/minutes?/, "分");
-      ages = ages.replace(/seconds?/, "秒");
-      ages = ages.replace(/\d+/g, '<span style="color:{{ theme.footer.ages.color }}">$&</span>');
-      div.innerHTML = `{{ __('footer.age')}} ${ages}`;
-    }
-    var div = document.createElement("div");
-    //插入到copyright之后
-    var copyright = document.querySelector(".copyright");
-    document.querySelector(".footer-inner").insertBefore(div, copyright.nextSibling);
-    timer();
-    setInterval("timer()",1000)
-  </script>
+```html thems\next\layout_custom\custom.swig
+{# 页脚站点运行时间统计 #} {% if theme.footer.ages.enable %}
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment-precise-range-plugin@1.3.0/moment-precise-range.min.js"></script>
+<script>
+  function timer() {
+    var ages = moment.preciseDiff(moment(),moment({{ theme.footer.ages.birthday }},"YYYYMMDD"));
+    ages = ages.replace(/years?/, "年");
+    ages = ages.replace(/months?/, "月");
+    ages = ages.replace(/days?/, "天");
+    ages = ages.replace(/hours?/, "小时");
+    ages = ages.replace(/minutes?/, "分");
+    ages = ages.replace(/seconds?/, "秒");
+    ages = ages.replace(/\d+/g, '<span style="color:{{ theme.footer.ages.color }}">$&</span>');
+    div.innerHTML = `{{ __('footer.age')}} ${ages}`;
+  }
+  var div = document.createElement("div");
+  //插入到copyright之后
+  var copyright = document.querySelector(".copyright");
+  document.querySelector(".footer-inner").insertBefore(div, copyright.nextSibling);
+  timer();
+  setInterval("timer()",1000)
+</script>
 {% endif %}
 ```
 
 如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：
 
-``` diff themes\next\layout\_layout.swig
+```diff themes\next\layout_layout.swig
       ...
       {% include '_third-party/exturl.swig' %}
       {% include '_third-party/bookmark.swig' %}
@@ -151,7 +153,7 @@ footer:
 
 修改主题配置文件：
 
-``` diff themes\next\_config.yml
+```diff themes\next_config.yml
   footer:
     ...
 +   ages:
@@ -165,7 +167,7 @@ footer:
 
 然后补全对应文案：
 
-``` diff themes\next\languages\zh-CN.yml
+```diff themes\next\languages\zh-CN.yml
   footer:
     powered: "由 %s 强力驱动"
     theme: 主题
@@ -177,30 +179,30 @@ footer:
 刷新浏览器即可生效。
 
 {% note info %}
-日期统计计算功能由 [moment](https://momentjs.com/) 和 [moment-precise-range](https://github.com/codebox/moment-precise-range) 提供，也可用原生JS Date对象来实现。
+日期统计计算功能由 [moment](https://momentjs.com/) 和 [moment-precise-range](https://github.com/codebox/moment-precise-range) 提供，也可用原生 JS Date 对象来实现。
 {% endnote %}
 
 ## 文章访问量统计
 
 {% note info %}
-本章节参考 [夏末 | 为NexT主题添加文章阅读量统计功能](https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud)
+本章节参考 [夏末 | 为 NexT 主题添加文章阅读量统计功能](https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud)
 {% endnote %}
 
 该功能基于 [LeanCloud](https://leancloud.cn) 提供后端数据服务，效果如下：
 
 ![文章访问量](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/post-pageviews.png "文章访问量")
 
-在LeanCloud上注册账号并创建应用，新建一个名为 Counter 的Class，ACL权限设置为 **无限制**：
+在 LeanCloud 上注册账号并创建应用，新建一个名为 Counter 的 Class，ACL 权限设置为 **无限制**：
 
 ![新建Counter类](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-Counter-class.png "新建Counter类")
 
 {% note info %}
-在LeanCloud中的Class可以理解为数据库中的数据表。Counter用于存储记录文章访问量，记录是以url作为唯一依据的，所以根据默认的permalink组成结构，如果你更改了文章的发布日期和标题中的任意一个，都会造成文章阅读数值的清零重计。
+在 LeanCloud 中的 Class 可以理解为数据库中的数据表。Counter 用于存储记录文章访问量，记录是以 url 作为唯一依据的，所以根据默认的 permalink 组成结构，如果你更改了文章的发布日期和标题中的任意一个，都会造成文章阅读数值的清零重计。
 {% endnote %}
 
-在控制台的 **设置** -> **应用Key** 中获取App ID和App Key填入到主题配置文件中：
+在控制台的 **设置** -> **应用 Key** 中获取 App ID 和 App Key 填入到主题配置文件中：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 leancloud_visitors:
   enable: true
   app_id: ***<app_id***
@@ -209,11 +211,11 @@ leancloud_visitors:
   betterPerformance: false
 ```
 
-站点上线后可以在 **设置** -> **安全中心** 中添加博客域名到 Web 安全域名中，设置后仅可在该域名下通过 JavaScript SDK 调用服务器资源，借以保护LeanCloud应用的数据安全。
+站点上线后可以在 **设置** -> **安全中心** 中添加博客域名到 Web 安全域名中，设置后仅可在该域名下通过 JavaScript SDK 调用服务器资源，借以保护 LeanCloud 应用的数据安全。
 
-如果想要自定义PV表述文案，可以修改文章布局模板中的相关代码：
+如果想要自定义 PV 表述文案，可以修改文章布局模板中的相关代码：
 
-``` diff themes\next\layout\_macro\post.swig
+```diff themes\next\layout_macro\post.swig
   {# LeanCould PageView #}
     ...
     {% if theme.post_meta.item_text %}
@@ -227,7 +229,7 @@ leancloud_visitors:
 
 修改统计表述文案：
 
-``` yaml themes/next/languages/zh-CN.yml
+```yaml themes/next/languages/zh-CN.yml
 post:
   views: 热度
 ```
@@ -245,7 +247,7 @@ post:
 
 个人推荐第二种，简单粗暴。
 
-除了LeanCloud，不蒜子也能提供文章阅读次数统计，但是不蒜子的统计结果只会在文章页显示，而不会显示在首页列表中，相关讨论可以参见 [阅读计数。对比LeanCloud和不蒜子](https://github.com/iissnan/hexo-theme-next/issues/801)
+除了 LeanCloud，不蒜子也能提供文章阅读次数统计，但是不蒜子的统计结果只会在文章页显示，而不会显示在首页列表中，相关讨论可以参见 [阅读计数。对比 LeanCloud 和不蒜子](https://github.com/iissnan/hexo-theme-next/issues/801)
 
 ## 站点及文章字数统计
 
@@ -265,26 +267,26 @@ $ npm install hexo-symbols-count-time --save
 
 将如下配置项添加到**站点配置文件**中，这些配置项主要用于控制每项统计信息是否显示。
 
-``` yaml _config.yml
+```yaml _config.yml
 symbols_count_time:
-  symbols: true   # 统计单篇文章字数
-  time: false   # 取消估算单篇文章阅读时间
-  total_symbols: true  # 统计站点总字数
-  total_time: false  # 取消估算站点总阅读时间
+  symbols: true # 统计单篇文章字数
+  time: false # 取消估算单篇文章阅读时间
+  total_symbols: true # 统计站点总字数
+  total_time: false # 取消估算站点总阅读时间
 ```
 
 在**主题配置文件**中做如下修改，这些配置项主要用于控制统计信息的显示样式。
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 symbols_count_time:
-  separated_meta: false  # 统计信息不换行显示
-  item_text_post: true  # 文章统计信息中是否显示“本文字数/阅读时长”等描述文字
-  item_text_total: true   # 站点统计信息中是否显示“本文字数/阅读时长”等描述文字
-  awl: 4  # Average Word Length：平均字符长度
-  wpm: 275  # Words Per Minute：阅读速度
+  separated_meta: false # 统计信息不换行显示
+  item_text_post: true # 文章统计信息中是否显示“本文字数/阅读时长”等描述文字
+  item_text_total: true # 站点统计信息中是否显示“本文字数/阅读时长”等描述文字
+  awl: 4 # Average Word Length：平均字符长度
+  wpm: 275 # Words Per Minute：阅读速度
 ```
 
-汉字的平均字符长度为1.5，如果在文章中使用纯中文进行写作（没有混杂英文），那么推荐设置 `awl: 2` 及 `wpm: 300`，但是如果文章中存在英文，建议设置 `awl: 4` 及 `wpm: 275`。
+汉字的平均字符长度为 1.5，如果在文章中使用纯中文进行写作（没有混杂英文），那么推荐设置 `awl: 2` 及 `wpm: 300`，但是如果文章中存在英文，建议设置 `awl: 4` 及 `wpm: 275`。
 
 因为修改了站点配置文件，所以需要重新启动服务器才能生效。
 
@@ -296,36 +298,35 @@ symbols_count_time:
 本章节参考 [DIYgod | 我藏好了哦](https://diygod.me/2153/)
 {% endnote %}
 
-离开和进入页面时动态修改Tab标签中的标题。
+离开和进入页面时动态修改 Tab 标签中的标题。
 
 ![搞怪网页标题](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/title-trick.png "搞怪网页标题")
 
 在主题自定义布局文件中添加以下代码：
 
-``` html themes\next\layout\_custom\custom.swig
-{# 搞怪网页标题 #}
-{% if theme.title_trick.enable %}
-  <script>
-    var OriginTitile = document.title;
-    var titleTime;
-    document.addEventListener('visibilitychange', function() {
-      if (document.hidden) {
-        document.title = '{{ theme.title_trick.leave }}' + OriginTitile;
-        clearTimeout(titleTime);
-      } else {
-        document.title = '{{ theme.title_trick.enter }}' + OriginTitile;
-        titleTime = setTimeout(function() {
-          document.title = OriginTitile;
-        }, 2000);
-      }
-    });
-  </script>
+```html themes\next\layout_custom\custom.swig
+{# 搞怪网页标题 #} {% if theme.title_trick.enable %}
+<script>
+  var OriginTitile = document.title;
+  var titleTime;
+  document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+      document.title = "{{ theme.title_trick.leave }}" + OriginTitile;
+      clearTimeout(titleTime);
+    } else {
+      document.title = "{{ theme.title_trick.enter }}" + OriginTitile;
+      titleTime = setTimeout(function() {
+        document.title = OriginTitile;
+      }, 2000);
+    }
+  });
+</script>
 {% endif %}
 ```
 
 如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：
 
-``` diff themes\next\layout\_layout.swig
+```diff themes\next\layout_layout.swig
       ...
       {% include '_third-party/exturl.swig' %}
       {% include '_third-party/bookmark.swig' %}
@@ -338,7 +339,7 @@ symbols_count_time:
 
 在主题配置文件中添加以下代码：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 # a trick on website title
 title_trick:
   enable: true
@@ -360,27 +361,27 @@ $ npm install hexo-generator-searchdb --save
 
 在**主题配置**文件中修改相关字段：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 local_search:
   enable: true
-  trigger: auto  # 每次输入改变都执行搜索
-  top_n_per_article: 3  # 每篇文章显示的搜索结果数量
+  trigger: auto # 每次输入改变都执行搜索
+  top_n_per_article: 3 # 每篇文章显示的搜索结果数量
   unescape: false
 ```
 
 在**站点配置**文件中添加以下字段：
 
-``` yaml _config.yml
+```yaml _config.yml
 search:
   path: search.xml
-  field: post  # 指定搜索范围，可选 post | page | all
-  format: html  # 指定页面内容形式，可选 html | raw (Markdown) | excerpt | more
+  field: post # 指定搜索范围，可选 post | page | all
+  format: html # 指定页面内容形式，可选 html | raw (Markdown) | excerpt | more
   limit: 10000
 ```
 
 在自定义样式文件中添加如下样式规则来增加搜索弹窗的页边距：
 
-``` css themes\next\source\css\_custom\custom.styl
+```css themes\next\source\css_custom\custom.styl
 //增加搜索弹窗的页边距
 .local-search-popup #local-search-result {
   padding: 25px 40px
@@ -388,9 +389,9 @@ search:
 }
 ```
 
-如果你同时在站点内启用了 wobblewindow 边缘摆动效果，则有可能会出现背景蒙版叠加在弹窗之前的问题，这种层级叠加异常的问题主要是因为 wobblewindow 中修改了弹窗父元素的 `position` 定位和 `z-index` 优先级，目前只能通过修改 localsearch 源码来修复该Bug：
+如果你同时在站点内启用了 wobblewindow 边缘摆动效果，则有可能会出现背景蒙版叠加在弹窗之前的问题，这种层级叠加异常的问题主要是因为 wobblewindow 中修改了弹窗父元素的 `position` 定位和 `z-index` 优先级，目前只能通过修改 localsearch 源码来修复该 Bug：
 
-``` diff themes\next\layout\_third-party\search\localsearch.swig
+```diff themes\next\layout_third-party\search\localsearch.swig
   $.ajax({
     url: path,
     dataType: isXml ? "xml" : "json",
@@ -413,14 +414,14 @@ search:
 ## 热门文章排行榜
 
 {% note info %}
-本章节部分思路参考 [nMask | Hexo搭建博客教程 #7.16](https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/)，自行进行了代码重构。
+本章节部分思路参考 [nMask | Hexo 搭建博客教程 #7.16](https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/)，自行进行了代码重构。
 {% endnote %}
 
 添加文章阅读次数排行统计页面，效果如下图：
 
 ![热门文章排行榜](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/top10.png "热门文章排行榜")
 
-该功能同样是基于LeanCloud提供的后端服务支持。具体实现方案如下：
+该功能同样是基于 LeanCloud 提供的后端服务支持。具体实现方案如下：
 
 在站点目录下执行以下命令新建页面
 
@@ -430,7 +431,7 @@ $ hexo new page top
 
 在主题配置文件中新增一项菜单入口：
 
-``` diff themes\next\_config.yml
+```diff themes\next_config.yml
   menu:
     home: / || home
 +   top: /top/ || signal
@@ -442,7 +443,7 @@ $ hexo new page top
 
 在语言包中新增菜单中文：
 
-``` diff themes\next\languages\zh-CN.yml
+```diff themes\next\languages\zh-CN.yml
   menu:
     home: 首页
     archives: 归档
@@ -454,7 +455,7 @@ $ hexo new page top
 
 然后在新增的排行榜页面内添加以下内容：
 
-``` html source\top\index.md
+```html source\top\index.md
 ---
 title: 热门文章Top 10
 comments: false
@@ -497,13 +498,13 @@ date: 2018-10-30 00:54:50
 </style>
 ```
 
-本是根据 [nMask | Hexo搭建博客教程 #7.16](https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/) 引入v0.6.1的脚本来实现该功能，结果发现出现如下Bug：
+本是根据 [nMask | Hexo 搭建博客教程 #7.16](https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/) 引入 v0.6.1 的脚本来实现该功能，结果发现出现如下 Bug：
 
 ![LeanCloud v0.6.1 Bug](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/LeanCloud-bug.png "LeanCloud v0.6.1 Bug")
 
-后来根据 [LeanCloud | JavaScript SDK 安装指南](https://leancloud.cn/docs/leanstorage_guide-js.html) 引入v3.10.0的最新脚本，使用过程中虽然功能正常，但是控制台有报错信息:
+后来根据 [LeanCloud | JavaScript SDK 安装指南](https://leancloud.cn/docs/leanstorage_guide-js.html) 引入 v3.10.0 的最新脚本，使用过程中虽然功能正常，但是控制台有报错信息:
 
->  Uncaught TypeError: Cannot redefine property: applicationId
+> Uncaught TypeError: Cannot redefine property: applicationId
 
 ## 豆瓣阅读/电影/游戏
 
@@ -523,23 +524,23 @@ $ npm install hexo-douban --save
 
 在站点配置文件中添加以下内容：
 
-``` yaml _config.yml
+```yaml _config.yml
 douban:
-  user:  # 个人豆瓣ID
+  user: # 个人豆瓣ID
   builtin: false
   book:
-    title: 'This is my book title'
-    quote: 'This is my book quote'
+    title: "This is my book title"
+    quote: "This is my book quote"
   movie:
-    title: 'This is my movie title'
-    quote: 'This is my movie quote'
+    title: "This is my movie title"
+    quote: "This is my movie quote"
   game:
-    title: 'This is my game title'
-    quote: 'This is my game quote'
+    title: "This is my game title"
+    quote: "This is my game quote"
   timeout: 10000
 ```
 
-- user: 填写豆瓣ID。登陆豆瓣后点击**个人主页**，此时url中最后一段即是用户ID，一般情况下会是一段数字，如果设置了个人域名的话，则个人域名即为ID。
+- user: 填写豆瓣 ID。登陆豆瓣后点击**个人主页**，此时 url 中最后一段即是用户 ID，一般情况下会是一段数字，如果设置了个人域名的话，则个人域名即为 ID。
 - builtin: 是否将生成页面的功能嵌入 `hexo s` 和 `hexo g` 中。
 - timeout: 爬取数据的超时时间。
 
@@ -547,20 +548,20 @@ douban:
 
 在主题配置文件中新增菜单入口：
 
-``` diff themes\next\_config.yml
+```diff themes\next_config.yml
   menu:
     home: / || home
     tags: /tags/ || tags
     categories: /categories/ || th
     archives: /archives/ || tasks
-+   books: /books/ || book  
-+   movies: /movies/ || video-camera  
++   books: /books/ || book
++   movies: /movies/ || video-camera
 +   games: /games/ || gamepad
 ```
 
 在语言包中新增菜单中文：
 
-``` diff themes\next\language\zh_CN.yml
+```diff themes\next\language\zh_CN.yml
   menu:
     home: 首页
     archives: 归档
@@ -580,46 +581,45 @@ $ hexo douban
 可选参数:
 
 - -b | \--books: 只生成豆瓣读书页面
-- -m | \--movies:  只生成豆瓣电影页面
+- -m | \--movies: 只生成豆瓣电影页面
 - -g | \--games: 只生成豆瓣游戏页面
 
-执行命令后，插件会根据用户提供的ID爬取豆瓣中的数据信息并在 `public` 目录下生成对应的页面，当服务器启动或部署后会将页面显示在对应的菜单路由下。
+执行命令后，插件会根据用户提供的 ID 爬取豆瓣中的数据信息并在 `public` 目录下生成对应的页面，当服务器启动或部署后会将页面显示在对应的菜单路由下。
 
 如果在站点配置中设置了 `douban.builtin: false`，则每次豆瓣数据变动后需要手动执行一次 `hexo douban` 来刷新页面数据。如果设置了 `douban.builtin: true`，则每次执行 `hexo s` 和 `hexo g` 的时候将会自动同时执行 `hexo douban` 命令，但这样可能会增加打包编译的时间。建议如果豆瓣数据变动不频繁的情况下该项设为 `false` 即可。
 
-通常大家都喜欢用 `hexo d` 来作为 `hexo deploy` 命令的简化，但是当安装了 `hexo douban` 之后， `hexo d` 就会有歧义而无法执行，因为 `hexo douban` 跟 `hexo deploy` 的Alias都是 `hexo d`。
+通常大家都喜欢用 `hexo d` 来作为 `hexo deploy` 命令的简化，但是当安装了 `hexo douban` 之后， `hexo d` 就会有歧义而无法执行，因为 `hexo douban` 跟 `hexo deploy` 的 Alias 都是 `hexo d`。
 
 ## 在线聊天
 
-在线聊天算是一个比较成熟的SaaS商业应用了，业内产品如 [Tidio](https://www.tidiochat.com/)、 [TalkJS](https://talkjs.com/)、[Intercom](https://www.intercom.com/)、[tawk.to](https://www.tawk.to/) 等，使用体验都很好，交互界面也很干净别致。经过比较，本站最终选择了 Tidio：
+在线聊天算是一个比较成熟的 SaaS 商业应用了，业内产品如 [Tidio](https://www.tidiochat.com/)、 [TalkJS](https://talkjs.com/)、[Intercom](https://www.intercom.com/)、[tawk.to](https://www.tawk.to/) 等，使用体验都很好，交互界面也很干净别致。经过比较，本站最终选择了 Tidio：
 
 - 在个人博客这种业务场景中，几乎用不到它的收费功能，可以算是终身免费了。
-- Tidio提供了多种消息回复渠道，包括网页、桌面应用、iOS/Android APP（需要Google play服务支持）。
-- 除了在线聊天，Tidio还可以在线发送邮件，以及关联接收Fackbook消息。
+- Tidio 提供了多种消息回复渠道，包括网页、桌面应用、iOS/Android APP（需要 Google play 服务支持）。
+- 除了在线聊天，Tidio 还可以在线发送邮件，以及关联接收 Fackbook 消息。
 - 在几款产品的界面风格中，还是 Tidio 看起来更加优雅一些，深得我爱。
 
 ![Tidio 界面](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio.png "Tidio 界面")
 
-首先需要[注册Tidio账号](https://www.tidiochat.com/panel/login)，根据引导填写应用信息。进入控制台后，在 **SETTINGS** -> **Developer** -> **Project data** 中获取到Public Key：
+首先需要[注册 Tidio 账号](https://www.tidiochat.com/panel/login)，根据引导填写应用信息。进入控制台后，在 **SETTINGS** -> **Developer** -> **Project data** 中获取到 Public Key：
 
 ![Tidio Public Key](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/tidio-public-key.png "Tidio Public Key")
 
-在主题配置文件下添加以下代码并补全Public Key：
+在主题配置文件下添加以下代码并补全 Public Key：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 # Tidio online chat
 # see: https://www.tidiochat.com
 tidio:
   enable: true
-  key:  # Public_Key
+  key: # Public_Key
 ```
 
 在主题自定义布局文件中添加以下代码：
 
-``` html themes\next\layout\_custom\custom.swig
-{# Tidio 在线联系功能 #}
-{% if theme.tidio.enable %}
-  <script async src="//code.tidio.co/{{ theme.tidio.key }}.js"></script>
+```html themes\next\layout_custom\custom.swig
+{# Tidio 在线联系功能 #} {% if theme.tidio.enable %}
+<script async src="//code.tidio.co/{{ theme.tidio.key }}.js"></script>
 {% endif %}
 ```
 
@@ -627,7 +627,7 @@ tidio:
 
 如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：
 
-``` diff themes\next\layout\_layout.swig
+```diff themes\next\layout_layout.swig
       ...
       {% include '_third-party/exturl.swig' %}
       {% include '_third-party/bookmark.swig' %}
@@ -638,37 +638,37 @@ tidio:
   </html>
 ```
 
-刷新页面即可在右下角看到Tidio的会话标志了。接下来可以在Tidio控制台的 **Channel** -> **Live chat** ->  **Appearance** 中根据提示定制聊天对话框的主题外观和语言包：
+刷新页面即可在右下角看到 Tidio 的会话标志了。接下来可以在 Tidio 控制台的 **Channel** -> **Live chat** -> **Appearance** 中根据提示定制聊天对话框的主题外观和语言包：
 
 ![定制Tidio样式与功能](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/Tidio-appearance.png "定制Tidio样式与功能")
 
 ## 行为监测与反馈
 
-[Hotjar](https://www.hotjar.com/) 是一款轻量级的监测分析工具，能够提供用户行为监测和用户反馈分析，相比Google Analysis而言，它没有复杂的监测指标与分析报表，更加的简单实用，并且为免费用户提供2000pv/day的数据采集服务，适用于小型网站或个人博客的监测分析。
+[Hotjar](https://www.hotjar.com/) 是一款轻量级的监测分析工具，能够提供用户行为监测和用户反馈分析，相比 Google Analysis 而言，它没有复杂的监测指标与分析报表，更加的简单实用，并且为免费用户提供 2000pv/day 的数据采集服务，适用于小型网站或个人博客的监测分析。
 
-Hotjar主要提供**ANALYTICS**和**FEEDBACK**两大类服务。
+Hotjar 主要提供**ANALYTICS**和**FEEDBACK**两大类服务。
 
-ANALYTICS主要用于用户交互行为的监测分析，属于客观分析，包括以下四项具体功能：
+ANALYTICS 主要用于用户交互行为的监测分析，属于客观分析，包括以下四项具体功能：
 
 - Heatmaps: 通过热力图可视化用户的鼠标交互行为，帮助理解用户动机和需求。
 - Recording: 记录用户在站点的行为轨迹，了解应用的可用性以及用户遭遇的问题。
 - Funnels: 记录每个页面或者步骤的用户流失率。
 - Forms: 记录表单中每一项输入的完成率，完成时间以及用户流失率。
 
-FEEDBACK主要为用户提供反馈渠道，收集用户观点与数据，属于主观分析，包括以下四项具体功能：
+FEEDBACK 主要为用户提供反馈渠道，收集用户观点与数据，属于主观分析，包括以下四项具体功能：
 
 - Incoming: 即时反馈，了解用户对页面的评价。
 - Polls: 投票反馈，获取某个问题的用户答案。
 - Surveys: 问卷调查，以问卷形式获取用户反馈。
 - Recruiters: 获取用户信息，招募用户用于用户调查或测试反馈。
 
-Hotjar通过以上八项具体而实用的功能为用户提供主客观相结合的监测分析服务，可以说它是所有轻量级分析工具中唯一做到了主客观相结合的，同时也是所有主客观分析工具中，做的最轻量的。
+Hotjar 通过以上八项具体而实用的功能为用户提供主客观相结合的监测分析服务，可以说它是所有轻量级分析工具中唯一做到了主客观相结合的，同时也是所有主客观分析工具中，做的最轻量的。
 
 {% note info %}
 更多功能介绍请参考 [Hotjar Features](https://www.hotjar.com/tour)
 {% endnote %}
 
-本站点中应用了Incoming即时反馈功能，读者可以通过该渠道评价页面或者提交勘误，点击悬挂在屏幕右侧的Feedback按钮弹出对话框，点击人物头像评价后将会跳转到如下界面：
+本站点中应用了 Incoming 即时反馈功能，读者可以通过该渠道评价页面或者提交勘误，点击悬挂在屏幕右侧的 Feedback 按钮弹出对话框，点击人物头像评价后将会跳转到如下界面：
 
 ![Hotjar Incoming Feedback](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-feedback.png "Hotjar Incoming Feedback")
 
@@ -680,41 +680,40 @@ Hotjar通过以上八项具体而实用的功能为用户提供主客观相结�
 更多关于 Incoming Feedback 的介绍请参考 [Incoming Feedback by Hotjar](https://www.hotjar.com/incoming-feedback)
 {% endnote %}
 
-在站点中集成Hotjar的各项功能，需要先 [注册 Hotjar 账号](https://insights.hotjar.com/register)，根据指引一步步填写站点信息，然后在控制面板首页中获取site ID：
+在站点中集成 Hotjar 的各项功能，需要先 [注册 Hotjar 账号](https://insights.hotjar.com/register)，根据指引一步步填写站点信息，然后在控制面板首页中获取 site ID：
 
 ![Hotjar site ID](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-site-id.png "Hotjar site ID")
 
-在主题配置文件下添加以下代码并补全site ID：
+在主题配置文件下添加以下代码并补全 site ID：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 # Hotjar
 # see: https://www.hotjar.com/
 hotjar:
   enable: true
-  siteID:  # site ID
+  siteID: # site ID
 ```
 
 在主题自定义布局文件中添加以下代码：
 
-``` html themes\next\layout\_custom\custom.swig
-{# hotjar 页面反馈 #}
-{% if theme.hotjar.enable %}
-  <script>
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:{{ theme.hotjar.siteID }},hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
+```html themes\next\layout_custom\custom.swig
+{# hotjar 页面反馈 #} {% if theme.hotjar.enable %}
+<script>
+  (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:{{ theme.hotjar.siteID }},hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 {% endif %}
 ```
 
 如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：
 
-``` diff themes\next\layout\_layout.swig
+```diff themes\next\layout_layout.swig
       ...
       {% include '_third-party/exturl.swig' %}
       {% include '_third-party/bookmark.swig' %}
@@ -730,28 +729,28 @@ hotjar:
 ![配置 Incoming Feedback](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/hotjar-setup-incoming.png "配置 Incoming Feedback")
 
 {% note info %}
-如果你在本站内发现了错别字、病句、失效链接、代码缩进不一致，可以通过页面右侧的Feedback反馈。
+如果你在本站内发现了错别字、病句、失效链接、代码缩进不一致，可以通过页面右侧的 Feedback 反馈。
 {% endnote%}
 
 # 文章页面个性化设置
 
 ## 添加评论功能
 
-Next支持多款评论系统：
+Next 支持多款评论系统：
 
-- [Disqus](https://disqus.com/)：欧美UI风格，支持Tweet、Facebook等国外社交软件的三方登陆和一键分享。 [Demo](https://blog.disqus.com/disqus-welcomes-the-spruce)
-- [gitment](https://github.com/imsun/gitment)：必须用github账号登陆才能评论，支持Markdown语法，与github issues页面风格一致 [Demo](https://imsun.github.io/gitment/)
-- [Valine](https://valine.js.org/)：支持匿名评论，支持Markdown语法，界面简洁美观
+- [Disqus](https://disqus.com/)：欧美 UI 风格，支持 Tweet、Facebook 等国外社交软件的三方登陆和一键分享。 [Demo](https://blog.disqus.com/disqus-welcomes-the-spruce)
+- [gitment](https://github.com/imsun/gitment)：必须用 github 账号登陆才能评论，支持 Markdown 语法，与 github issues 页面风格一致 [Demo](https://imsun.github.io/gitment/)
+- [Valine](https://valine.js.org/)：支持匿名评论，支持 Markdown 语法，界面简洁美观
 - [畅言](http://changyan.kuaizhan.com/)：国产评论系统，可区分热评和最新评论，论坛贴吧风
-- [来必力](https://www.livere.com/)：支持插入图片和GIF，支持国内外多种社交媒体的三方登陆 [Demo](https://www.livere.com/city-demo)
+- [来必力](https://www.livere.com/)：支持插入图片和 GIF，支持国内外多种社交媒体的三方登陆 [Demo](https://www.livere.com/city-demo)
 
-博客的评论系统不需要太过复杂的功能，我的要求是一定要轻量级，足够简洁美观，并且支持Markdown语法，因此我首选Valine和gitment，这两个评论系统都是由国内个人开发的，在此向开发者致敬。
+博客的评论系统不需要太过复杂的功能，我的要求是一定要轻量级，足够简洁美观，并且支持 Markdown 语法，因此我首选 Valine 和 gitment，这两个评论系统都是由国内个人开发的，在此向开发者致敬。
 
 ![Valine 评论系统](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/valine-comments.png "Valine 评论系统")
 
-Next已经内置了Valine组件，在主题配置文件中开启评论功能即可，同时，由于Valine是基于Leancloud提供后端服务的，所以需要填写LeanCloud的App ID和App Key。
+Next 已经内置了 Valine 组件，在主题配置文件中开启评论功能即可，同时，由于 Valine 是基于 Leancloud 提供后端服务的，所以需要填写 LeanCloud 的 App ID 和 App Key。
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 valine:
   enable: true
   appid:  ***<app_id***
@@ -765,15 +764,15 @@ valine:
   visitor: true  # 同时开启文章阅读次数统计
 ```
 
-Valine也附带了阅读统计功能，可以在Valine配置项中设置 `visitor: true` 开启该功能。为避免后端服务冲突，建议不要同时启用Valine的阅读统计功能和 `leancloud_visitors`。
+Valine 也附带了阅读统计功能，可以在 Valine 配置项中设置 `visitor: true` 开启该功能。为避免后端服务冲突，建议不要同时启用 Valine 的阅读统计功能和 `leancloud_visitors`。
 
 {% note info %}
 关于如何在收到评论时发送邮件提醒请参照 [赵俊 | Hexo 优化 --- Valine 扩展之邮件通知](http://www.zhaojun.im/hexo-valine-admin/)
 {% endnote %}
 
-Next暂时不支持通过配置的方式隐藏文章标题下的评论数量，如要隐藏，可在自定义样式文件中添加如下代码：
+Next 暂时不支持通过配置的方式隐藏文章标题下的评论数量，如要隐藏，可在自定义样式文件中添加如下代码：
 
-``` css themes/next/source/css/_custom/custom.styl
+```css themes/next/source/css/_custom/custom.styl
 //屏蔽标题下的评论数量
 .post-comments-count {
   display: none;
@@ -782,7 +781,7 @@ Next暂时不支持通过配置的方式隐藏文章标题下的评论数量，�
 
 如果你是轻度洁癖患者，想要隐藏评论区的浏览器和操作系统版本号以拥有更加干净的评论界面，可在自定义样式文件中添加如下代码：
 
-``` css themes/next/source/css/_custom/custom.styl
+```css themes/next/source/css/_custom/custom.styl
 //屏蔽评论组件的多余信息
 #comments .vsys {
   display: none;
@@ -795,7 +794,7 @@ Next暂时不支持通过配置的方式隐藏文章标题下的评论数量，�
 
 在主题配置文件中开启文章底部的版权声明，版权声明默认使用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可协议，用户可以根据自身需要修改 `licence` 字段变更协议。
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 post_copyright:
   enable: true
   license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a>
@@ -803,7 +802,7 @@ post_copyright:
 
 默认版权声明中只有 **本文作者**、**本文链接**、**版权声明** 三项，如果你想添加更多内容，如 **创建时间**、**修改时间**、**引用链接** 等，需要修改版权声明的相关代码：
 
-``` html themes\next\layout\_macro\post-copyright.swig
+```html themes\next\layout_macro\post-copyright.swig
 <!-- JS库 clipboard 拷贝内容到粘贴板-->
 <script src="https://cdn.bootcss.com/clipboard.js/2.0.1/clipboard.min.js"></script>
 
@@ -811,7 +810,6 @@ post_copyright:
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <ul class="post-copyright">
-
   <!-- 本文标题 -->
   <li>
     <strong>{{ __('post.copyright.title') + __('symbol.colon') }} </strong>
@@ -839,22 +837,36 @@ post_copyright:
   <!-- 引用链接 -->
   <li class="post-copyright-link">
     <strong>{{ __('post.copyright.link') + __('symbol.colon') }}</strong>
-    <a href="{{ post.url | default(post.permalink) }}" title="{{ post.title }}">{{ post.url | default(post.permalink) }}</a>
-    <span class="copy-path"  title="点击复制引用链接"><i style="cursor: pointer" class="fa fa-clipboard" data-clipboard-text="[{{ post.author | default(author) }}'s Blog | {{ post.title }}]({{ post.permalink }})"  aria-label="{{ __('post.copy_success') }}"></i></span>
+    <a href="{{ post.url | default(post.permalink) }}" title="{{ post.title }}"
+      >{{ post.url | default(post.permalink) }}</a
+    >
+    <span class="copy-path" title="点击复制引用链接"
+      ><i
+        style="cursor: pointer"
+        class="fa fa-clipboard"
+        data-clipboard-text="[{{ post.author | default(author) }}'s Blog | {{ post.title }}]({{ post.permalink }})"
+        aria-label="{{ __('post.copy_success') }}"
+      ></i
+    ></span>
   </li>
 
   <!-- 版权声明 -->
   <li class="post-copyright-license">
-    <strong>{{ __('post.copyright.license_title') + __('symbol.colon') }} </strong>
+    <strong
+      >{{ __('post.copyright.license_title') + __('symbol.colon') }}
+    </strong>
     {{ __('post.copyright.license_content', theme.post_copyright.license) }}
   </li>
 </ul>
 
 <script>
-  var clipboard = new ClipboardJS('.fa-clipboard');
-  clipboard.on('success', function(target){
-    var message = document.createElement('div');
-    message.innerHTML = '<i class="fa fa-check-circle message-icon"></i><span class="message-content">' + target.trigger.getAttribute('aria-label') + '</span>';
+  var clipboard = new ClipboardJS(".fa-clipboard");
+  clipboard.on("success", function(target) {
+    var message = document.createElement("div");
+    message.innerHTML =
+      '<i class="fa fa-check-circle message-icon"></i><span class="message-content">' +
+      target.trigger.getAttribute("aria-label") +
+      "</span>";
     swal({
       content: message,
       className: "copy-success-message",
@@ -867,22 +879,22 @@ post_copyright:
 
 在版权样式文件中添加如下样式：
 
-``` css themes\next\source\css\_common\components\post\post-copyright.styl
+```css themes\next\source\css_common\components\post\post-copyright.styl
 .swal-overlay {
   background-color: transparent;
 }
 
 .copy-success-message {
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  width: auto;  
+  width: auto;
   margin: 16x 0px;
   vertical-align: top;
 }
 
 .copy-success-message .swal-content {
   margin: 0px 0px !important;
-  padding: 10px 16px;  
+  padding: 10px 16px;
   line-height: 1em;
 }
 
@@ -898,11 +910,11 @@ post_copyright:
 
 然后补全版权信息文案字段：
 
-``` yaml themes/next/languages/zh-CN.yml
+```yaml themes/next/languages/zh-CN.yml
 post:
   created: 创建时间
   modified: 修改时间
-  copy_success: 复制成功  
+  copy_success: 复制成功
   copyright:
     title: 本文标题
     author: 本文作者
@@ -912,13 +924,12 @@ post:
 ```
 
 {% note info %}
-点击引用链接后的图标 <i class="fa fa-clipboard"></i> 即可快捷复制Markdown引用链接，并将弹出复制成功的提示语。该功能主要借助 [clipboard](https://clipboardjs.com/) 和 [sweetalert](https://sweetalert.js.org/) 两个js库来实现，并参考 [antDesign | message组件](https://ant.design/components/message/) 重写了弹框样式。
+点击引用链接后的图标 <i class="fa fa-clipboard"></i> 即可快捷复制 Markdown 引用链接，并将弹出复制成功的提示语。该功能主要借助 [clipboard](https://clipboardjs.com/) 和 [sweetalert](https://sweetalert.js.org/) 两个 js 库来实现，并参考 [antDesign | message 组件](https://ant.design/components/message/) 重写了弹框样式。
 {% endnote %}
 
+在实际使用过程中，并非每篇文章都需要版权声明，如果转载了别人的文章，文末再出现个人版权声明就不太合适。此时可在 Front-Matter 中设定变量 `copyright` 用于控制是否显示版权信息。修改文章布局模板中相关代码，使得只有当主题配置文件中 `post_copyright.enable` 字段和 `page.copyright` 字段同时为 `true` 时才会插入版权声明：
 
-在实际使用过程中，并非每篇文章都需要版权声明，如果转载了别人的文章，文末再出现个人版权声明就不太合适。此时可在Front-Matter中设定变量 `copyright` 用于控制是否显示版权信息。修改文章布局模板中相关代码，使得只有当主题配置文件中 `post_copyright.enable` 字段和 `page.copyright` 字段同时为 `true` 时才会插入版权声明：
-
-``` diff themes/next/layout/_macro/post.swig
+```diff themes/next/layout/_macro/post.swig
 - {% if theme.post_copyright.enable and not is_index %}
 + {% if theme.post_copyright.enable and page.copyright and not is_index %}
     <div>
@@ -929,7 +940,7 @@ post:
 
 为了批量为每篇新文章设定该变量并赋默认值，可以修改草稿模板内容，这样以来每篇草稿发布为正文后都会默认显示底部版权信息：
 
-``` diff scaffolds\draft.md
+```diff scaffolds\draft.md
   title: {{ title }}
   tags:
   categories:
@@ -942,7 +953,7 @@ post:
 
 启用主题配置文件中的打赏相关字段，并将个人收款码图片置于 themes\\next\\source\\images\\ 目录下，注意保持图片命名与配置文件中一致：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 reward_comment:
 wechatpay: /images/wechatpay.png
 alipay: /images/alipay.jpg
@@ -950,7 +961,7 @@ alipay: /images/alipay.jpg
 
 如果要关闭悬停收款码上的文字抖动效果，可以在自定义样式文件中添加以下代码：
 
-``` css themes/next/source/css/_custom/custom.styl
+```css themes/next/source/css/_custom/custom.styl
 //关闭打赏收款码的文字抖动效果
 #QR > div:hover p {
   animation: none;
@@ -959,7 +970,7 @@ alipay: /images/alipay.jpg
 
 并非每个页面都需要开启打赏功能，可以在 Front-Matter 中添加 `reward` 字段来控制是否在本文章中添加打赏信息，然后修改文章布局模板中相关的判定条件：
 
-``` diff themes/next/layout/_macro/post.swig
+```diff themes/next/layout/_macro/post.swig
 - {% if (theme.alipay or theme.wechatpay or theme.bitcoin) and not is_index %}
 + {% if ( post.reward and (theme.alipay or theme.wechatpay or theme.bitcoin) and not is_index %}
     <div>
@@ -970,7 +981,7 @@ alipay: /images/alipay.jpg
 
 为了方便可在草稿模板 scaffolds\\draft.md 中统一添加 `reward` 字段默认值：
 
-``` diff scaffolds\draft.md
+```diff scaffolds\draft.md
   title: {{ title }}
   tags:
   categories:
@@ -983,7 +994,6 @@ alipay: /images/alipay.jpg
 
 ![fancyBox 灯箱](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/fancybox.png "fancyBox 灯箱")
 
-
 在根目录下执行以下命令安装相关依赖：
 
 ```
@@ -992,7 +1002,7 @@ $ git clone https://github.com/theme-next/theme-next-fancybox3 themes/next/sourc
 
 在主题配置文件中设置 `fancybox: true`：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 fancybox: true
 ```
 
@@ -1012,10 +1022,10 @@ $ npm install hexo-related-popular-posts --save
 
 在主题配置文件中开启相关文章推荐功能：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 related_posts:
   enable: true
-  title:  # custom header, leave empty to use the default one
+  title: # custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
@@ -1025,7 +1035,7 @@ related_posts:
 
 事实上并非每篇文章都需要开启该功能，可在文章 Front-Matter 中设置 `related_posts` 字段来控制是否在文末显示相关文章，然后修改文章布局模板中相关的判定条件：
 
-``` diff themes/next/layout/_macro/post.swig
+```diff themes/next/layout/_macro/post.swig
 - {% if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) %}
 + {% if theme.related_posts.enable and (theme.related_posts.display_in_home or not is_index) and post.related_posts %}
     {% include 'post-related.swig' with { post: post } %}
@@ -1034,7 +1044,7 @@ related_posts:
 
 为了方便可在草稿模板 scaffolds\\draft.md 中统一添加 `related_posts` 字段默认值：
 
-``` diff scaffolds\draft.md
+```diff scaffolds\draft.md
   title: {{ title }}
   tags:
   categories:
@@ -1048,36 +1058,36 @@ related_posts:
 - Comments: 评论系统，类似于留言板
 - Reviews: 评价系统，类似于商品评价
 - Rating: 星级评分系统
-- Google Reviews: 关联展示Google Rating
+- Google Reviews: 关联展示 Google Rating
 
-Next主题中已经集成了 widgetpack 的星级评分系统，用户无须再安装或引入插件脚本，只需在 widgetpack 中注册账号并修改主题配置即可，应用效果如下：
+Next 主题中已经集成了 widgetpack 的星级评分系统，用户无须再安装或引入插件脚本，只需在 widgetpack 中注册账号并修改主题配置即可，应用效果如下：
 
 ![文章评分组件](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rating.png "文章评分组件")
 
-在 [widgetpack](https://widgetpack.com) 中注册账号，根据引导填写应用名称和域名创建应用，创建后可在页面左上角看到应用id。
+在 [widgetpack](https://widgetpack.com) 中注册账号，根据引导填写应用名称和域名创建应用，创建后可在页面左上角看到应用 id。
 
-在主题配置文件中开启评分功能，填写应用id，并设置评分颜色：
+在主题配置文件中开启评分功能，填写应用 id，并设置评分颜色：
 
-``` yaml themes\next\_config.yml
+```yaml themes\next_config.yml
 # Star rating support to each article.
 # To get your ID visit https://widgetpack.com
 rating:
   enable: true
-  id:     #<app_id>
-  color:  fadb14
+  id: #<app_id>
+  color: fadb14
 ```
 
-此时刷新浏览器即可在文章末尾看到空的评分栏了。点击评分发现需要以社交账号登陆，而这些社交账号基本都是facebook、twitter等墙外的社交软件，限制了评分系统可用性，我们可以在 widgetpack 控制台中修改评分认证机制。
+此时刷新浏览器即可在文章末尾看到空的评分栏了。点击评分发现需要以社交账号登陆，而这些社交账号基本都是 facebook、twitter 等墙外的社交软件，限制了评分系统可用性，我们可以在 widgetpack 控制台中修改评分认证机制。
 
 在控制台中点击左上角展开菜单，在 **Rating** -> **Setting** 中将 Vote via 选项改为 Device(cookie) 以开启匿名评分，该选项将基于设备认证访问者身份：
 
 ![开启匿名评分](http://yearito-1256884783.image.myqcloud.com/hexo-advanced-settings/rate-vote-via.png "开启匿名评分")
 
-用户还可以在该页面设定 star 数量和大小。修改后记得勾选右下角的SAVE SETTING才会生效。
+用户还可以在该页面设定 star 数量和大小。修改后记得勾选右下角的 SAVE SETTING 才会生效。
 
 在实际使用过程中，并非每篇文章都需要开启评分。此时可在 Front-Matter 中设定变量 rating 用于控制是否开启评分。修改文章布局模板中相关代码，使得只有当主题配置文件中 `rating.enable` 字段和 `page.rating` 字段同时为 `true` 才会插入评分组件：
 
-``` diff themes\next\layout\_macro\post.swig
+```diff themes\next\layout_macro\post.swig
   {% if not is_index %}
 -  {% if theme.rating.enable or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) or (theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable) or (theme.baidushare and theme.baidushare.type === "button" )%}
 +  {% if (theme.rating.enable and post.rating) or (theme.vkontakte_api.enable and theme.vkontakte_api.like) or (theme.facebook_sdk.enable and theme.facebook_sdk.like_button) or (theme.needmoreshare2.enable and theme.needmoreshare2.postbottom.enable) or (theme.baidushare and theme.baidushare.type === "button" )%}
@@ -1091,17 +1101,17 @@ rating:
 
 为了批量为每篇新文章设定该变量并赋默认值，可以修改草稿模板内容，这样以来每篇草稿发布后都会默认开启评分：
 
-``` diff scaffolds\draft.md
+```diff scaffolds\draft.md
   title: {{ title }}
   tags:
   categories:
 + rating: true
 ```
 
-站点上线后，可以在控制台菜单的 **Site** -> **Setting** 中勾选 Private，使得组件只对应用内指定的域名上生效，这样以来即时别人错填了你的id也不会将评分数据误提交到你的应用中了。
+站点上线后，可以在控制台菜单的 **Site** -> **Setting** 中勾选 Private，使得组件只对应用内指定的域名上生效，这样以来即时别人错填了你的 id 也不会将评分数据误提交到你的应用中了。
 
 {% note info %}
-widgetpack 与前文提到的 hotjar 在评价反馈功能上的侧重点不一样，widgetpack 更侧重于对文章的评分，而hotjar侧重于对整个页面的评分，并提供了文字和截图反馈的渠道。
+widgetpack 与前文提到的 hotjar 在评价反馈功能上的侧重点不一样，widgetpack 更侧重于对文章的评分，而 hotjar 侧重于对整个页面的评分，并提供了文字和截图反馈的渠道。
 {% endnote %}
 
 ## 文章加密访问
@@ -1118,14 +1128,14 @@ $ npm install hexo-blog-encrypt --save
 
 在站点配置文件中添加如下字段：
 
-``` yaml _config.yml
+```yaml _config.yml
 encrypt:
   enable: true
   default_abstract: 此文章已被加密，需要输入密码访问。  //首页文章列表中加密文章的默认描述文案
   default_message: 请输入密码以阅读这篇私密文章。  //文章详情页的密码输入框上的默认描述文案
 ```
 
-重启服务器，这个时候可能需要经历较长一段时间的加密过程，请耐心等待，加密完成后刷新页面将会显示密码输入框，输入密码后才能继续访问文章内容。
+然后在文章 Front-Matter 中添加 `password` 字段用于设置文章访问密码。重启服务器，这个时候可能需要经历较长一段时间的加密过程，请耐心等待，加密完成后刷新页面将会显示密码输入框，输入密码后才能继续访问文章内容。
 
 {% note info %}
 该功能只会加密文章正文，其他内容如打赏、版权信息、标签等则不会被加密隐藏，这样看起来有点奇怪，所以建议加密文章隐藏掉打赏和版权信息内容。
@@ -1135,13 +1145,13 @@ encrypt:
 
 在主题自定义布局文件中添加如下代码：
 
-``` html themes\next\layout\_custom\custom.swig
+```html themes\next\layout_custom\custom.swig
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 ```
 
 如果 custom.swig 文件不存在，需要手动新建并在布局页面中 body 末尾引入：
 
-``` diff themes\next\layout\_layout.swig
+```diff themes\next\layout_layout.swig
       ...
       {% include '_third-party/exturl.swig' %}
       {% include '_third-party/bookmark.swig' %}
@@ -1154,15 +1164,15 @@ encrypt:
 
 在 node_modules 依赖库中修改 hexo-blog-encrypt 源码：
 
-``` diff node_modules\hexo-blog-encrypt\lib\blog.encrypt.js
+```diff node_modules\hexo-blog-encrypt\lib\blog.encrypt.js
   ...
   } catch (e) {
 -   alert(decryptionError);
-+   swal({   
++   swal({
 +     text: "密码错误!",
 +     icon: "error",
 +     className: "password-error",
-+     timer: 1000,  
++     timer: 1000,
 +     button: false
 +   });
     console.log(e);
@@ -1172,20 +1182,20 @@ encrypt:
 
 在自定义样式文件中添加如下代码：
 
-``` css themes/next/source/css/_custom/custom.styl
+```css themes/next/source/css/_custom/custom.styl
 //密码错误sweetalert弹框样式修改
 .swal-overlay {
   background-color: transparent;
 }
 
 .password-error {
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 ```
 
 {% note warning %}
-由于是在node_module中修改的依赖文件，一旦更新或者重装依赖都会覆盖修改，需要重新修改一遍。
+由于是在 node_module 中修改的依赖文件，一旦更新或者重装依赖都会覆盖修改，需要重新修改一遍。
 {% endnote %}
 
 # 结束语
@@ -1199,16 +1209,16 @@ encrypt:
 
 所有以上这些原则，尽管实现起来可能更复杂，需要更多的代码，但都是为了让站点更好维护，更灵活方便。
 
-本文介绍了如何通过修改自定义设置和集成三方插件服务搭建一个功能更加完善的个性化Hexo博客，尽管我们的博客可能已经做的令自己很满意了，但至今仍是只能在本地访问，别人看不到。我们建立博客往往都是希望能将自己的文章分享给他人来创造更多价值，如果想要了解如何将站点部署到公网，请参考本系列中最后一篇文章：{% post_link hexo-deploy-to-VPS %}。
+本文介绍了如何通过修改自定义设置和集成三方插件服务搭建一个功能更加完善的个性化 Hexo 博客，尽管我们的博客可能已经做的令自己很满意了，但至今仍是只能在本地访问，别人看不到。我们建立博客往往都是希望能将自己的文章分享给他人来创造更多价值，如果想要了解如何将站点部署到公网，请参考本系列中最后一篇文章：{% post_link hexo-deploy-to-VPS %}。
 
 <div class="reference-linking">参考链接</div>
 
-- [reuixiy | 打造个性超赞博客Hexo+NexT+GitHubPages的超深度优化](https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html)
-- [夏末 | 为NexT主题添加文章阅读量统计功能](https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud)
-- [nMask | Hexo搭建博客教程](https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/)
+- [reuixiy | 打造个性超赞博客 Hexo+NexT+GitHubPages 的超深度优化](https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html)
+- [夏末 | 为 NexT 主题添加文章阅读量统计功能](https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud)
+- [nMask | Hexo 搭建博客教程](https://thief.one/2017/03/03/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/)
 - [LeanCloud | JavaScript SDK 安装指南](https://leancloud.cn/docs/leanstorage_guide-js.html)
 - [DIYgod | 我藏好了哦](https://diygod.me/2153/)
 - [mythsman/hexo-douban README.md](https://github.com/mythsman/hexo-douban)
-- [asdfv1929 | Hexo NexT主题内接入网页在线联系功能](https://asdfv1929.github.io/2018/01/21/daovoice/)
+- [asdfv1929 | Hexo NexT 主题内接入网页在线联系功能](https://asdfv1929.github.io/2018/01/21/daovoice/)
 - [Hotjar Features](https://www.hotjar.com/tour)
 - [Incoming Feedback by Hotjar](https://www.hotjar.com/incoming-feedback)
