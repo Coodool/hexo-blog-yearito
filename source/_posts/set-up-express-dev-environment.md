@@ -1,6 +1,8 @@
 ---
 title: 搭建支持热重载以及 babel 的 Express 开发环境
-tags: nodejs express
+tags:
+  - nodejs
+  - express
 categories:
   - 技术
   - 后端

@@ -1,6 +1,8 @@
 ---
 title: 「译」axios和fetch，我们应该用哪个？
-tags: JavaScript 翻译
+tags:
+  - JavaScript
+  - 翻译
 categories:
   - 技术
   - 前端
