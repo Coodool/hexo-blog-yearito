@@ -10,6 +10,8 @@ public/
 .deploy*/
 source/_drafts/*
 
+_config.yml
+
 themes/next/source/lib/*
 
 themes/next/source/lib/font-awesome/less/

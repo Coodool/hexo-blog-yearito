@@ -5,8 +5,9 @@ reward: true
 rating: true
 related_posts: false
 date: 2019-02-22 19:26:39
-tags:
+tags: 非洲迷你小刺猬
 categories:
+  - 生活
 ---
 
 现在看来，以前真是闲的蛋疼，花了大量时间整理出这份主粮资料，然而好像并没什么卵用。各位权当看个热闹。
@@ -18,7 +19,6 @@ categories:
 ![](http://qiniu.yearito.cn/hedgehog/nutrition-contrast.jpg!1080p)
 
 {% btn http://qiniu.yearito.cn/hedgehog/nutrition-contrast.xlsx, Excel 表格下载, download fa-fw%}
-
 
 # 刺猬粮
 
@@ -36,18 +36,18 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥28.0% | ≥12.0%  | ≤13.0% | ≤8.0% | ≤12.0% | 27% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  | 其他 |
+| :------: | :----: | :----: | :----: | :----: | :--: |
+|  ≥28.0%  | ≥12.0% | ≤13.0% | ≤8.0%  | ≤12.0% | 27%  |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [Mazuri官网](http://www.mazuri.com/mazuriinsectivorediet5MK8.aspx) | 40 USD  | 25 lb | 275.9元 |  12.2元/斤 |
-| [美国亚马逊](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=mazuri+hedgehog&rh=i%3Aaps%2Ck%3Amazuri+hedgehog) | 29 USD  | 4 lb | 200元 |  55.1元/斤 |
+|                                                                    供货渠道                                                                    |  售价  | 规格  | 人民币总价 | 人民币单价 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------: | :----: | :---: | :--------: | :--------: |
+|                                      [Mazuri 官网](http://www.mazuri.com/mazuriinsectivorediet5MK8.aspx)                                       | 40 USD | 25 lb |  275.9 元  | 12.2 元/斤 |
+| [美国亚马逊](https://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=mazuri+hedgehog&rh=i%3Aaps%2Ck%3Amazuri+hedgehog) | 29 USD | 4 lb  |   200 元   | 55.1 元/斤 |
 
-颗粒小，适口性差。美国原产是25lb大包装，一般代理商分装为200g和453g(1lb)两种规格散售。市场上流传的以昆虫作为主要原料未得到考证。
+颗粒小，适口性差。美国原产是 25lb 大包装，一般代理商分装为 200g 和 453g(1lb)两种规格散售。市场上流传的以昆虫作为主要原料未得到考证。
 
 ## 钢琴兔
 
@@ -63,17 +63,17 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥29.0% | ≥5.0%  | ≤4.5% | ≤9.5% | ≤10.0% | 42% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  | 其他 |
+| :------: | :----: | :----: | :----: | :----: | :--: |
+|  ≥29.0%  | ≥5.0%  | ≤4.5%  | ≤9.5%  | ≤10.0% | 42%  |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [日本亚马逊](https://www.amazon.co.jp/%E3%82%A4%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-600g-200g%C3%973%E5%80%8B/dp/B00JHDPWNQ/ref=sr_1_1?ie=UTF8&qid=1484562801&sr=8-1&key) | 1300 JPY  | 600 g | 78.5元 | 65.4元/斤 |
+|                                                                                                                                   供货渠道                                                                                                                                    |   售价   | 规格  | 人民币总价 | 人民币单价 |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------: | :---: | :--------: | :--------: |
+| [日本亚马逊](https://www.amazon.co.jp/%E3%82%A4%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%BC-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%82%BB%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-600g-200g%C3%973%E5%80%8B/dp/B00JHDPWNQ/ref=sr_1_1?ie=UTF8&qid=1484562801&sr=8-1&key) | 1300 JPY | 600 g |  78.5 元   | 65.4 元/斤 |
 
-600g一袋，里面有三小袋200g的独立包装。脂肪含量很低，可用作减肥粮。
+600g 一袋，里面有三小袋 200g 的独立包装。脂肪含量很低，可用作减肥粮。
 
 ## 品高
 
@@ -89,16 +89,16 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥30.0% | ≥10.0%  | ≤9.0% | ≤7.0% | ≤8.0% | 36% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分  | 其他 |
+| :------: | :----: | :----: | :----: | :---: | :--: |
+|  ≥30.0%  | ≥10.0% | ≤9.0%  | ≤7.0%  | ≤8.0% | 36%  |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [日本亚马逊](https://www.amazon.co.jp/SANKO-%E4%B8%89%E6%99%83%E5%95%86%E4%BC%9A-F25-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89-300g/dp/B005749LAE/ref=sr_1_1?ie=UTF8&qid=1484574927&sr=8-1&keywords=SANKO+F25) | 580 JPY  | 300 g | 35元 | 58.4元/斤 |
-| [日本亚马逊](https://www.amazon.co.jp/SANKO-%E4%B8%89%E6%99%83%E5%95%86%E4%BC%9A-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89-1kg/dp/B00JKBSJRG/ref=sr_1_1?ie=UTF8&qid=1484568163&sr=8-1&keywords=%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%25) | 1720 JPY  | 1 kg | 103.8元 | 51.9元/斤 |
+|                                                                                                                                    供货渠道                                                                                                                                     |   售价   | 规格  | 人民币总价 | 人民币单价 |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------: | :---: | :--------: | :--------: |
+|                  [日本亚马逊](https://www.amazon.co.jp/SANKO-%E4%B8%89%E6%99%83%E5%95%86%E4%BC%9A-F25-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89-300g/dp/B005749LAE/ref=sr_1_1?ie=UTF8&qid=1484574927&sr=8-1&keywords=SANKO+F25)                  | 580 JPY  | 300 g |   35 元    | 58.4 元/斤 |
+| [日本亚马逊](https://www.amazon.co.jp/SANKO-%E4%B8%89%E6%99%83%E5%95%86%E4%BC%9A-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89-1kg/dp/B00JKBSJRG/ref=sr_1_1?ie=UTF8&qid=1484568163&sr=8-1&keywords=%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%25) | 1720 JPY | 1 kg  |  103.8 元  | 51.9 元/斤 |
 
 有腥味，颗粒为不规则长条形，官方的说法是食品未使用任何添加剂用于调整颗粒形状。
 
@@ -112,20 +112,20 @@ categories:
 **营养成分：**
 
 | 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥42.0% | ≥11.0%  | ≤5.0% | ≤7.0% |  | 35% |
+| :------: | :----: | :----: | :----: | :--: | :--: |
+|  ≥42.0%  | ≥11.0% | ≤5.0%  | ≤7.0%  |      | 35%  |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [日本亚马逊](https://www.amazon.co.jp/%E3%82%B8%E3%82%AF%E3%83%A9-%E3%82%B8%E3%82%AF%E3%83%A9%E3%82%A2%E3%82%AE%E3%83%88-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89%E3%82%AA%E3%83%83%E3%83%86%E3%82%A3%E3%83%A210-100g/dp/B00JLAJEIE/ref=sr_1) | 580 JPY  | 100 g | 35元 | 175.1元/斤 |
-| [日本亚马逊](https://www.amazon.co.jp/%E3%82%B8%E3%82%AF%E3%83%A9-%E3%82%B8%E3%82%AF%E3%83%A9%E3%82%A2%E3%82%AE%E3%83%88-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89%E3%82%AA%E3%83%83%E3%83%86%E3%82%A3%E3%83%A210-300g/dp/B00JLAR3GE/ref=sr_1) | 1170 JPY  | 300 g | 70.6元 | 117.7元/斤 | 
-| [日本亚马逊](https://www.amazon.co.jp/%E3%82%B8%E3%82%AF%E3%83%A9%E3%82%A2%E3%82%AE%E3%83%88-%E3%82%B8%E3%82%AF%E3%83%A9%E3%82%A2%E3%82%AE%E3%83%88-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89%E3%82%AA%E3%83%83%E3%83%86%E3%82%A3%E3%83%A210-750g/dp/B00MRW4IGG/ref=sr_1) | 2610 JPY  | 750 g | 157.6元 | 105元/斤 |
+|                                                                                                                                                 供货渠道                                                                                                                                                 |   售价   | 规格  | 人民币总价 | 人民币单价  |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------: | :---: | :--------: | :---------: |
+|              [日本亚马逊](https://www.amazon.co.jp/%E3%82%B8%E3%82%AF%E3%83%A9-%E3%82%B8%E3%82%AF%E3%83%A9%E3%82%A2%E3%82%AE%E3%83%88-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89%E3%82%AA%E3%83%83%E3%83%86%E3%82%A3%E3%83%A210-100g/dp/B00JLAJEIE/ref=sr_1)               | 580 JPY  | 100 g |   35 元    | 175.1 元/斤 |
+|              [日本亚马逊](https://www.amazon.co.jp/%E3%82%B8%E3%82%AF%E3%83%A9-%E3%82%B8%E3%82%AF%E3%83%A9%E3%82%A2%E3%82%AE%E3%83%88-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89%E3%82%AA%E3%83%83%E3%83%86%E3%82%A3%E3%83%A210-300g/dp/B00JLAR3GE/ref=sr_1)               | 1170 JPY | 300 g |  70.6 元   | 117.7 元/斤 |
+| [日本亚马逊](https://www.amazon.co.jp/%E3%82%B8%E3%82%AF%E3%83%A9%E3%82%A2%E3%82%AE%E3%83%88-%E3%82%B8%E3%82%AF%E3%83%A9%E3%82%A2%E3%82%AE%E3%83%88-%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F%E3%83%95%E3%83%BC%E3%83%89%E3%82%AA%E3%83%83%E3%83%86%E3%82%A3%E3%83%A210-750g/dp/B00MRW4IGG/ref=sr_1) | 2610 JPY | 750 g |  157.6 元  |  105 元/斤  |
 
 气味香，稍油腻，适口性很好。
 
-## Inout标准粮
+## Inout 标准粮
 
 ![Inout AF-200/201基础刺猬粮](http://qiniu.yearito.cn/hedgehog/Inout-AF-200.jpg!360p "Inout AF-200/201基础刺猬粮")
 
@@ -134,20 +134,20 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥30.0% | ≥13.25%  | ≤1.73% | ≤9.54% |  | 45.48% |
+| 粗蛋白质 | 粗脂肪  | 粗纤维 | 粗灰质 | 水分 |  其他  |
+| :------: | :-----: | :----: | :----: | :--: | :----: |
+|  ≥30.0%  | ≥13.25% | ≤1.73% | ≤9.54% |      | 45.48% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [dochiqueen](http://www.dochiqueen.com/shop/shopdetail.html?branduid=355&xcode=041&mcode=001&scode=&type=Y&search=&sort=order) | 8200 KRW  | 800 g（盒装） | 48.1元 | 30.1元/斤 |
-| [dochiqueen](http://www.dochiqueen.com/shop/shopdetail.html?branduid=343&xcode=041&mcode=001&scode=&type=Y&search=&sort=order) | 9500 KRW  | 900 g（罐装） | 55.7元 | 31元/斤 | 
+|                                                            供货渠道                                                            |   售价   |     规格      | 人民币总价 | 人民币单价 |
+| :----------------------------------------------------------------------------------------------------------------------------: | :------: | :-----------: | :--------: | :--------: |
+| [dochiqueen](http://www.dochiqueen.com/shop/shopdetail.html?branduid=355&xcode=041&mcode=001&scode=&type=Y&search=&sort=order) | 8200 KRW | 800 g（盒装） |  48.1 元   | 30.1 元/斤 |
+| [dochiqueen](http://www.dochiqueen.com/shop/shopdetail.html?branduid=343&xcode=041&mcode=001&scode=&type=Y&search=&sort=order) | 9500 KRW | 900 g（罐装） |  55.7 元   |  31 元/斤  |
 
 添加了干面包虫和牛磺酸
 
-## Inout高级粮
+## Inout 高级粮
 
 ![Inout AF-500/510高级刺猬粮](http://qiniu.yearito.cn/hedgehog/Inout-AF-500.jpg!360p "Inout AF-500/510高级刺猬粮")
 
@@ -156,16 +156,16 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥31.5% | ≥17.5%  | ≤4.0% | ≤12.0% |  | 35.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 |  其他  |
+| :------: | :----: | :----: | :----: | :--: | :----: |
+|  ≥31.5%  | ≥17.5% | ≤4.0%  | ≤12.0% |      | 35.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [dochiqueen](http://www.dochiqueen.com/shop/shopdetail.html?branduid=450644&xcode=041&mcode=001&scode=&type=Y&search=&sort=order) | 11000 KRW  | 900 g（盒装） | 64.5元 | 35.8元/斤 |
-| [dochiqueen](http://www.dochiqueen.com/shop/shopdetail.html?branduid=381286&xcode=041&mcode=001&scode=&type=Y&sort=order&pre_idx=20&pre=ok) | 12000 KRW  | 900 g（罐装） | 70.4元 | 39.1元/斤 | 
+|                                                                  供货渠道                                                                   |   售价    |     规格      | 人民币总价 | 人民币单价 |
+| :-----------------------------------------------------------------------------------------------------------------------------------------: | :-------: | :-----------: | :--------: | :--------: |
+|      [dochiqueen](http://www.dochiqueen.com/shop/shopdetail.html?branduid=450644&xcode=041&mcode=001&scode=&type=Y&search=&sort=order)      | 11000 KRW | 900 g（盒装） |  64.5 元   | 35.8 元/斤 |
+| [dochiqueen](http://www.dochiqueen.com/shop/shopdetail.html?branduid=381286&xcode=041&mcode=001&scode=&type=Y&sort=order&pre_idx=20&pre=ok) | 12000 KRW | 900 g（罐装） |  70.4 元   | 39.1 元/斤 |
 
 添加了干面包虫和牛磺酸
 
@@ -185,17 +185,17 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥31.0% | ≥22.0%  | ≤5.1% | ≤10.0% | ≤11.0% | 20.90% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥31.0%  | ≥22.0% | ≤5.1%  | ≤10.0% | ≤11.0% | 20.90% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [京东超市](https://item.jd.com/709697.html) | 25 RMB  | 0.4 kg | 25元 | 31.3元/斤 |
-| [京东超市](https://item.jd.com/709697.html) | 268 RMB  | 4 kg | 268元 | 33.5元/斤 |
-| [京东超市](https://item.jd.com/709697.html) | 473 RMB  | 10 kg | 473元 | 23.7元/斤 |
+|                  供货渠道                   |  售价   |  规格  | 人民币总价 | 人民币单价 |
+| :-----------------------------------------: | :-----: | :----: | :--------: | :--------: |
+| [京东超市](https://item.jd.com/709697.html) | 25 RMB  | 0.4 kg |   25 元    | 31.3 元/斤 |
+| [京东超市](https://item.jd.com/709697.html) | 268 RMB |  4 kg  |   268 元   | 33.5 元/斤 |
+| [京东超市](https://item.jd.com/709697.html) | 473 RMB | 10 kg  |   473 元   | 23.7 元/斤 |
 
 主流刺猬主粮，但有较多假货，购前需谨慎甄别
 
@@ -213,18 +213,18 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥33.0% | ≥15.8%  | ≤5.2% | ≤9.3% | ≤11.0% | 25.70% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥33.0%  | ≥15.8% | ≤5.2%  | ≤9.3%  | ≤11.0% | 25.70% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [京东超市](https://item.jd.com/709712.html) | 25.2 RMB  | 0.4 kg | 25.2元 | 31.5元/斤 |
-| [京东超市](https://item.jd.com/709712.html) | 116 RMB  | 2 kg | 116元 | 29元/斤 |
-| [京东超市](https://item.jd.com/709712.html) | 259 RMB  | 4 kg | 259元 | 32.4元/斤 |
-| [京东超市](https://item.jd.com/709712.html) | 416 RMB  | 10 kg | 416元 | 20.8元/斤 |
+|                  供货渠道                   |   售价   |  规格  | 人民币总价 | 人民币单价 |
+| :-----------------------------------------: | :------: | :----: | :--------: | :--------: |
+| [京东超市](https://item.jd.com/709712.html) | 25.2 RMB | 0.4 kg |  25.2 元   | 31.5 元/斤 |
+| [京东超市](https://item.jd.com/709712.html) | 116 RMB  |  2 kg  |   116 元   |  29 元/斤  |
+| [京东超市](https://item.jd.com/709712.html) | 259 RMB  |  4 kg  |   259 元   | 32.4 元/斤 |
+| [京东超市](https://item.jd.com/709712.html) | 416 RMB  | 10 kg  |   416 元   | 20.8 元/斤 |
 
 ## 福摩鸭肉
 
@@ -240,17 +240,17 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥34.0% | ≥20.0%  | ≤3.5% |  | ≤10.0% | 32.50% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥34.0%  | ≥20.0% | ≤3.5%  |        | ≤10.0% | 32.50% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [美国亚马逊](https://www.amazon.com/Fromm-Four-Star-Nutritionals-Duck-2-5-Pound/dp/B000KDVID0/ref=sr_1_6?ie=UTF8&qid=1485614437&sr=8-6&keywords=fromm+four+star+cat+food+duck) | 16 USD  | 2.5 lb | 110.3元 | 60.8元/斤 |
-| [美国亚马逊](https://www.amazon.com/Fromm-Four-Star-Duck-Food-5-Pound/dp/B002CSW6GO/ref=sr_1_5?ie=UTF8&qid=1485614437&sr=8-5&keywords=fromm+four+star+cat+food+duck) | 30 USD  | 5 lb | 206.9元 | 45.6元/斤 |
-| [美国亚马逊](https://www.amazon.com/Fromm-Four-Star-Duck-Veg-Food/dp/B000WFRO8E/ref=sr_1_2?s=pet-supplies&ie=UTF8&qid=1485615372&sr=1-2&keywords=fromm+four+star+duck) | 60 USD | 15 lb | 413.8元 | 30.4元/斤 |
+|                                                                                    供货渠道                                                                                    |  售价  |  规格  | 人民币总价 | 人民币单价 |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----: | :----: | :--------: | :--------: |
+| [美国亚马逊](https://www.amazon.com/Fromm-Four-Star-Nutritionals-Duck-2-5-Pound/dp/B000KDVID0/ref=sr_1_6?ie=UTF8&qid=1485614437&sr=8-6&keywords=fromm+four+star+cat+food+duck) | 16 USD | 2.5 lb |  110.3 元  | 60.8 元/斤 |
+|      [美国亚马逊](https://www.amazon.com/Fromm-Four-Star-Duck-Food-5-Pound/dp/B002CSW6GO/ref=sr_1_5?ie=UTF8&qid=1485614437&sr=8-5&keywords=fromm+four+star+cat+food+duck)      | 30 USD |  5 lb  |  206.9 元  | 45.6 元/斤 |
+|     [美国亚马逊](https://www.amazon.com/Fromm-Four-Star-Duck-Veg-Food/dp/B000WFRO8E/ref=sr_1_2?s=pet-supplies&ie=UTF8&qid=1485615372&sr=1-2&keywords=fromm+four+star+duck)     | 60 USD | 15 lb  |  413.8 元  | 30.4 元/斤 |
 
 ## 雪山鸡肉
 
@@ -266,17 +266,17 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥30.0% | ≥12.0%  | ≤4.0% |  | ≤10.0% | 44.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥30.0%  | ≥12.0% | ≤4.0%  |        | ≤10.0% | 44.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 9 USD | 2 lb | 62.1元 | 34.2元/斤 |
-| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 14.2 USD | 5 lb | 97.9元 | 21.6元/斤 |
-| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 22.8 USD | 10 lb | 157.2元 | 17.3元/斤 |
+|                                                                                供货渠道                                                                                |   售价   | 规格  | 人民币总价 | 人民币单价 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------: | :---: | :--------: | :--------: |
+| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) |  9 USD   | 2 lb  |  62.1 元   | 34.2 元/斤 |
+| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 14.2 USD | 5 lb  |  97.9 元   | 21.6 元/斤 |
+| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 22.8 USD | 10 lb |  157.2 元  | 17.3 元/斤 |
 
 ## 雪山鸭肉
 
@@ -292,17 +292,17 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥30.0% | ≥12.0%  | ≤4.0% |  | ≤10.0% | 44.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥30.0%  | ≥12.0% | ≤4.0%  |        | ≤10.0% | 44.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 9 USD | 2 lb | 62.1元 | 34.2元/斤 |
-| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 15.2 USD | 5 lb | 104.8元 | 23.1元/斤 |
-| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 22.8 USD | 10 lb | 157.2元 | 17.3元/斤 |
+|                                                                                供货渠道                                                                                |   售价   | 规格  | 人民币总价 | 人民币单价 |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------: | :---: | :--------: | :--------: |
+| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) |  9 USD   | 2 lb  |  62.1 元   | 34.2 元/斤 |
+| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 15.2 USD | 5 lb  |  104.8 元  | 23.1 元/斤 |
+| [petco](http://www.petco.com/shop/en/petcostore/product/cat/cat-food/dry-cat-food/natural-balance-limited-ingredient-diets-green-pea-and-chicken-formula-dry-cat-food) | 22.8 USD | 10 lb |  157.2 元  | 17.3 元/斤 |
 
 ## Go! 鸡肉
 
@@ -318,17 +318,17 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥32.0% | ≥20.0%  | ≤2.5% | ≤6.5% | ≤10.0% | 29.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥32.0%  | ≥20.0% | ≤2.5%  | ≤6.5%  | ≤10.0% | 29.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/go-daily-defence-chicken-recipe-dry/dp/40463) | 20.9 USD | 4 lb | 144.1元 | 39.7元/斤 |
-| [chewy](https://www.chewy.com/go-daily-defence-chicken-recipe-dry/dp/40463) | 33 USD | 8 lb | 227.6元 | 31.4元/斤 |
-| [chewy](https://www.chewy.com/go-daily-defence-chicken-recipe-dry/dp/40463) | 57 USD | 16 lb | 393.1元 | 27.1元/斤 |
+|                                  供货渠道                                   |   售价   | 规格  | 人民币总价 | 人民币单价 |
+| :-------------------------------------------------------------------------: | :------: | :---: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/go-daily-defence-chicken-recipe-dry/dp/40463) | 20.9 USD | 4 lb  |  144.1 元  | 39.7 元/斤 |
+| [chewy](https://www.chewy.com/go-daily-defence-chicken-recipe-dry/dp/40463) |  33 USD  | 8 lb  |  227.6 元  | 31.4 元/斤 |
+| [chewy](https://www.chewy.com/go-daily-defence-chicken-recipe-dry/dp/40463) |  57 USD  | 16 lb |  393.1 元  | 27.1 元/斤 |
 
 ## Go! 鸭肉
 
@@ -344,17 +344,17 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥31.0% | ≥15.0%  | ≤3.5% | ≤7.5% | ≤10.0% | 33.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥31.0%  | ≥15.0% | ≤3.5%  | ≤7.5%  | ≤10.0% | 33.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/go-sensitivity-shine-limited/dp/118424) | 24 USD | 4 lb | 165.5元 | 45.6元/斤 |
-| [chewy](https://www.chewy.com/go-sensitivity-shine-limited/dp/118424) | 39 USD | 8 lb | 269元 | 37.1元/斤 |
-| [chewy](https://www.chewy.com/go-sensitivity-shine-limited/dp/118424) | 70.5 USD | 16 lb | 486.2元 | 33.5元/斤 |
+|                               供货渠道                                |   售价   | 规格  | 人民币总价 | 人民币单价 |
+| :-------------------------------------------------------------------: | :------: | :---: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/go-sensitivity-shine-limited/dp/118424) |  24 USD  | 4 lb  |  165.5 元  | 45.6 元/斤 |
+| [chewy](https://www.chewy.com/go-sensitivity-shine-limited/dp/118424) |  39 USD  | 8 lb  |   269 元   | 37.1 元/斤 |
+| [chewy](https://www.chewy.com/go-sensitivity-shine-limited/dp/118424) | 70.5 USD | 16 lb |  486.2 元  | 33.5 元/斤 |
 
 ## Go! 多种肉
 
@@ -370,17 +370,17 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥46.0% | ≥18.0%  | ≤1.5% | ≤9.0% | ≤10.0% | 15.50% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥46.0%  | ≥18.0% | ≤1.5%  | ≤9.0%  | ≤10.0% | 15.50% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/go-fit-free-grain-free-chicken/dp/41295) | 22 USD | 4 lb | 151.7元 | 41.8元/斤 |
-| [chewy](https://www.chewy.com/go-fit-free-grain-free-chicken/dp/41295) | 35 USD | 8 lb | 241.4元 | 33.3元/斤 |
-| [chewy](https://www.chewy.com/go-fit-free-grain-free-chicken/dp/41295) | 60 USD | 16 lb | 413.8元 | 28.5元/斤 |
+|                                供货渠道                                |  售价  | 规格  | 人民币总价 | 人民币单价 |
+| :--------------------------------------------------------------------: | :----: | :---: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/go-fit-free-grain-free-chicken/dp/41295) | 22 USD | 4 lb  |  151.7 元  | 41.8 元/斤 |
+| [chewy](https://www.chewy.com/go-fit-free-grain-free-chicken/dp/41295) | 35 USD | 8 lb  |  241.4 元  | 33.3 元/斤 |
+| [chewy](https://www.chewy.com/go-fit-free-grain-free-chicken/dp/41295) | 60 USD | 16 lb |  413.8 元  | 28.5 元/斤 |
 
 ## NOW
 
@@ -396,16 +396,16 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥33.0% | ≥20.0%  | ≤2.5% | ≤6.0% | ≤10.0% | 28.50% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥33.0%  | ≥20.0% | ≤2.5%  | ≤6.0%  | ≤10.0% | 28.50% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/now-fresh-grain-free-kitten-recipe/dp/35720) | 26 USD | 4 lb | 179.3元 | 49.4元/斤 |
-| [chewy](https://www.chewy.com/now-fresh-grain-free-kitten-recipe/dp/35720) | 43 USD | 8 lb | 296.6元 | 40.9元/斤 |
+|                                  供货渠道                                  |  售价  | 规格 | 人民币总价 | 人民币单价 |
+| :------------------------------------------------------------------------: | :----: | :--: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/now-fresh-grain-free-kitten-recipe/dp/35720) | 26 USD | 4 lb |  179.3 元  | 49.4 元/斤 |
+| [chewy](https://www.chewy.com/now-fresh-grain-free-kitten-recipe/dp/35720) | 43 USD | 8 lb |  296.6 元  | 40.9 元/斤 |
 
 ## 渴望鸡肉
 
@@ -421,16 +421,16 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥40.0% | ≥20.0%  | ≤3.0% | ≤8.0% | ≤10.0% | 19.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥40.0%  | ≥20.0% | ≤3.0%  | ≤8.0%  | ≤10.0% | 19.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/orijen-cat-kitten-grain-free-dry-cat/dp/128822) | 24 USD | 4 lb | 165.5元 | 45.6元/斤 |
-| [chewy](https://www.chewy.com/orijen-cat-kitten-grain-free-dry-cat/dp/128822) | 59 USD | 12 lb | 406.9元 | 37.4元/斤 |
+|                                   供货渠道                                    |  售价  | 规格  | 人民币总价 | 人民币单价 |
+| :---------------------------------------------------------------------------: | :----: | :---: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/orijen-cat-kitten-grain-free-dry-cat/dp/128822) | 24 USD | 4 lb  |  165.5 元  | 45.6 元/斤 |
+| [chewy](https://www.chewy.com/orijen-cat-kitten-grain-free-dry-cat/dp/128822) | 59 USD | 12 lb |  406.9 元  | 37.4 元/斤 |
 
 ## 渴望红肉
 
@@ -446,16 +446,16 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥40.0% | ≥20.0%  | ≤3.0% | ≤9.5% | ≤10.0% | 17.50% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥40.0%  | ≥20.0% | ≤3.0%  | ≤9.5%  | ≤10.0% | 17.50% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/orijen-regional-red-grain-free-dry/dp/56994) | 29 USD | 4 lb | 200元 | 55.1元/斤 |
-| [chewy](https://www.chewy.com/orijen-regional-red-grain-free-dry/dp/56994) | 66 USD | 12 lb | 455.2元 | 41.8元/斤 |
+|                                  供货渠道                                  |  售价  | 规格  | 人民币总价 | 人民币单价 |
+| :------------------------------------------------------------------------: | :----: | :---: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/orijen-regional-red-grain-free-dry/dp/56994) | 29 USD | 4 lb  |   200 元   | 55.1 元/斤 |
+| [chewy](https://www.chewy.com/orijen-regional-red-grain-free-dry/dp/56994) | 66 USD | 12 lb |  455.2 元  | 41.8 元/斤 |
 
 ## 爱肯拿禽肉
 
@@ -471,16 +471,16 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥35.0% | ≥20.0%  | ≤4.0% |  | ≤10.0% | 31.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥35.0%  | ≥20.0% | ≤4.0%  |        | ≤10.0% | 31.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/acana-meadowland-regional-formula/dp/123898) | 21 USD | 4 lb | 144.8元 | 39.9元/斤 |
-| [chewy](https://www.chewy.com/acana-meadowland-regional-formula/dp/123898) | 45 USD | 12 lb | 310.3元 | 28.5元/斤 |
+|                                  供货渠道                                  |  售价  | 规格  | 人民币总价 | 人民币单价 |
+| :------------------------------------------------------------------------: | :----: | :---: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/acana-meadowland-regional-formula/dp/123898) | 21 USD | 4 lb  |  144.8 元  | 39.9 元/斤 |
+| [chewy](https://www.chewy.com/acana-meadowland-regional-formula/dp/123898) | 45 USD | 12 lb |  310.3 元  | 28.5 元/斤 |
 
 ## 爱肯拿羊鸭肉
 
@@ -496,16 +496,16 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥35.0% | ≥20.0%  | ≤4.0% |  | ≤10.0% | 31.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥35.0%  | ≥20.0% | ≤4.0%  |        | ≤10.0% | 31.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/acana-grasslands-regional-formula/dp/123925) | 23 USD | 4 lb | 158.6元 | 43.7元/斤 |
-| [chewy](https://www.chewy.com/acana-grasslands-regional-formula/dp/123925) | 49 USD | 12 lb | 337.9元 | 31元/斤 |
+|                                  供货渠道                                  |  售价  | 规格  | 人民币总价 | 人民币单价 |
+| :------------------------------------------------------------------------: | :----: | :---: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/acana-grasslands-regional-formula/dp/123925) | 23 USD | 4 lb  |  158.6 元  | 43.7 元/斤 |
+| [chewy](https://www.chewy.com/acana-grasslands-regional-formula/dp/123925) | 49 USD | 12 lb |  337.9 元  |  31 元/斤  |
 
 ## 爱肯拿红肉
 
@@ -521,15 +521,13 @@ categories:
 
 **营养成分：**
 
-| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 | 水分 | 其他 |
-| :---: | :---:  | :---: | :---: | :---: | :---: |
-| ≥35.0% | ≥20.0%  | ≤4.0% |  | ≤10.0% | 31.00% |
+| 粗蛋白质 | 粗脂肪 | 粗纤维 | 粗灰质 |  水分  |  其他  |
+| :------: | :----: | :----: | :----: | :----: | :----: |
+|  ≥35.0%  | ≥20.0% | ≤4.0%  |        | ≤10.0% | 31.00% |
 
 **参考价格：**
 
-| 供货渠道 | 售价 | 规格 | 人民币总价 | 人民币单价 |
-| :---: | :---:  | :---: | :---: | :---: |
-| [chewy](https://www.chewy.com/acana-appalachian-ranch-regional/dp/123940) | 23 USD | 4 lb | 158.6元 | 43.7元/斤 |
-| [chewy](https://www.chewy.com/acana-appalachian-ranch-regional/dp/123940) | 49 USD | 12 lb | 337.9元 | 31元/斤 |
-
-
+|                                 供货渠道                                  |  售价  | 规格  | 人民币总价 | 人民币单价 |
+| :-----------------------------------------------------------------------: | :----: | :---: | :--------: | :--------: |
+| [chewy](https://www.chewy.com/acana-appalachian-ranch-regional/dp/123940) | 23 USD | 4 lb  |  158.6 元  | 43.7 元/斤 |
+| [chewy](https://www.chewy.com/acana-appalachian-ranch-regional/dp/123940) | 49 USD | 12 lb |  337.9 元  |  31 元/斤  |
