@@ -11,6 +11,7 @@ public/
 source/_drafts/*
 
 _config.yml
+.env
 
 themes/next/source/lib/*
 

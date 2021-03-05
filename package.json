@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npx hexo server",
     "build": "npx hexo generate",
-    "deploy": "npx hexo douban -b -m && npx hexo generate --deploy"
+    "deploy": "npx hexo generate && sls deploy"
   },
   "hexo": {
     "version": "3.7.1"
