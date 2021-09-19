@@ -12,7 +12,7 @@
 
   {% if theme.footer.approve %}
     <span class="post-meta-divider">|</span>
-    <a href="http://www.beian.miit.gov.cn" target="_blank">{{ theme.footer.approve }}</a>
+    <a href="http://beian.miit.gov.cn" target="_blank">{{ theme.footer.approve }}</a>
   {% endif %}
 
   {% if config.symbols_count_time.total_symbols %}
