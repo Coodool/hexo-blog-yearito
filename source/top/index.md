@@ -6,15 +6,17 @@ date: 2018-10-30 00:54:50
 
 <div id="post-rank"></div>
 
-<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.13.2/dist/av-min.js"></script>
 <!-- <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script> -->
 <script type="text/javascript">
   var APP_ID = 'aFFxWQnF1fWvTpBbPeQ777Gi-gzGzoHsz';
   var APP_KEY = 'C6WUNgLD7DXgy3MzxbX804ri';
+  var SERVER_URL = 'https://affxwqnf.lc-cn-n1-shared.com';
   //AV.initialize(APP_ID, APP_KEY);
   AV.init({
     appId: APP_ID,
-    appKey: APP_KEY
+    appKey: APP_KEY,
+    serverURL: SERVER_URL
   });
 
   var query = new AV.Query('Counter');//表名
