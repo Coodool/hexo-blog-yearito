@@ -12,11 +12,11 @@
   },
   "dependencies": {
     "antd-message": "^1.0.10",
-    "hexo": "^3.2.0",
+    "hexo": "^3.7.1",
     "hexo-algolia": "^1.2.5",
     "hexo-baidu-url-submit": "0.0.6",
     "hexo-blog-encrypt": "^2.0.10",
-    "hexo-deployer-git": "^0.3.1",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-douban": "^1.0.4",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
